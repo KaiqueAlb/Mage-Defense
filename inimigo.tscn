@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://pya277o3gcek"]
 
 [ext_resource type="Script" uid="uid://cg58yx0skjslg" path="res://Scripts/controlador_inimigo.gd" id="1_030df"]
+[ext_resource type="Resource" uid="uid://3haucvjthufq" path="res://resources/inimigo_base.tres" id="2_0b8xr"]
 
 [sub_resource type="Animation" id="Animation_g45jm"]
 length = 0.001
@@ -43,6 +44,7 @@ _data = {
 [node name="Inimigo" type="PathFollow2D" unique_id=2051060067]
 loop = false
 script = ExtResource("1_030df")
+status = ExtResource("2_0b8xr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=500695801]
 rotation = 1.5707964

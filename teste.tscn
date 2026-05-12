@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://6igp5br7wa4h"]
 
-[ext_resource type="PackedScene" uid="uid://pya277o3gcek" path="res://inimigo.tscn" id="1_o02vu"]
-[ext_resource type="Script" uid="uid://bh03th4qf21vk" path="res://Scripts/resources/status_inimigo.gd" id="2_7w86a"]
+[ext_resource type="Script" uid="uid://dbtvmyheio217" path="res://level_manager.gd" id="1_s2wow"]
+[ext_resource type="PackedScene" uid="uid://7bjf0rioc8tp" path="res://torre.tscn" id="2_7w86a"]
 
 [sub_resource type="Curve2D" id="Curve2D_3iyrq"]
 _data = {
@@ -9,23 +9,27 @@ _data = {
 }
 point_count = 7
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s2wow"]
-load_path = "res://.godot/imported/body_halftrack.png-81040c65e3701f9078255d597ab70323.ctex"
-
-[sub_resource type="Resource" id="Resource_3iyrq"]
-script = ExtResource("2_7w86a")
-vida = 5
-vel = 64.0
-sprite = SubResource("CompressedTexture2D_s2wow")
-metadata/_custom_type_script = "uid://bh03th4qf21vk"
-
 [node name="Level_teste" type="Node" unique_id=6352120]
+script = ExtResource("1_s2wow")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1374995746]
 position = Vector2(92, 87)
 curve = SubResource("Curve2D_3iyrq")
 
-[node name="Inimigo" parent="Path2D" unique_id=2051060067 instance=ExtResource("1_o02vu")]
-position = Vector2(-1, -1)
-rotation = 1.5749804
-status = SubResource("Resource_3iyrq")
+[node name="Torre" parent="." unique_id=729895132 instance=ExtResource("2_7w86a")]
+offset_left = 300.0
+offset_top = 388.0
+offset_right = 361.0
+offset_bottom = 438.0
+
+[node name="Torre2" parent="." unique_id=215428762 instance=ExtResource("2_7w86a")]
+offset_left = 806.0
+offset_top = 181.0
+offset_right = 867.0
+offset_bottom = 231.0
+
+[node name="Torre3" parent="." unique_id=1814572505 instance=ExtResource("2_7w86a")]
+offset_left = 808.0
+offset_top = 529.0
+offset_right = 869.0
+offset_bottom = 579.0
