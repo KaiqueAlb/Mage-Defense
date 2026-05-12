@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://6igp5br7wa4h"]
+
+[ext_resource type="PackedScene" uid="uid://pya277o3gcek" path="res://inimigo.tscn" id="1_o02vu"]
+[ext_resource type="Script" uid="uid://bh03th4qf21vk" path="res://Scripts/resources/status_inimigo.gd" id="2_7w86a"]
+
+[sub_resource type="Curve2D" id="Curve2D_3iyrq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, -1, 0, 0, 0, 0, -2, 238, 0, 0, 0, 0, 509, 234, 0, 0, 0, 0, 507, 14, 0, 0, 0, 0, 951, 10, 0, 0, 0, 0, 953, 555, 0, 0, 0, 0, 196, 554)
+}
+point_count = 7
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s2wow"]
+load_path = "res://.godot/imported/body_halftrack.png-81040c65e3701f9078255d597ab70323.ctex"
+
+[sub_resource type="Resource" id="Resource_3iyrq"]
+script = ExtResource("2_7w86a")
+vida = 5
+vel = 64.0
+sprite = SubResource("CompressedTexture2D_s2wow")
+metadata/_custom_type_script = "uid://bh03th4qf21vk"
+
+[node name="Level_teste" type="Node" unique_id=6352120]
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1374995746]
+position = Vector2(92, 87)
+curve = SubResource("Curve2D_3iyrq")
+
+[node name="Inimigo" parent="Path2D" unique_id=2051060067 instance=ExtResource("1_o02vu")]
+position = Vector2(-1, -1)
+rotation = 1.5749804
+status = SubResource("Resource_3iyrq")
