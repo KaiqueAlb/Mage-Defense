@@ -1,6 +1,6 @@
 extends Resource
-class_name StatusInimigo
+class_name StatusTorre 
 
-@export var vida: int
+@export var dano: int
 @export var vel: float
 @export var sprite: CompressedTexture2D

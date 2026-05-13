@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="StatusTorre" format=3 uid="uid://cxiv0eyd0bcn"]
+
+[ext_resource type="Script" uid="uid://v1vskglcruqb" path="res://Scripts/resources/status_torre.gd" id="1_owokv"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hvn2s"]
+load_path = "res://.godot/imported/towers_walls_blank.png-112200235244833c81cff6170cb9361f.ctex"
+
+[resource]
+script = ExtResource("1_owokv")
+dano = 1
+vel = 120.0
+sprite = SubResource("CompressedTexture2D_hvn2s")

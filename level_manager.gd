@@ -1,15 +1,10 @@
 extends Node
 
-var enemy_manager = preload("res://enemy_controller.gd")
-# Called when the node enters the scene tree for the first time.
+@export var selected_tower_scene: PackedScene
+@export var selected_tower_status: StatusTorre
+
 func _ready() -> void:
-	
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	
-	
 	pass
-	
+
+func _process(delta: float) -> void:
+	pass

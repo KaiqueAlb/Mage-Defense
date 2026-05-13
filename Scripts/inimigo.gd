@@ -6,14 +6,11 @@ extends PathFollow2D
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var anim: AnimationPlayer = $AnimationPlayer
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sprite.texture = status.sprite
 	anim.play("new_animation")
 
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	_mover(delta)
 	_morrer()

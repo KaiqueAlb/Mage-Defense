@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://6igp5br7wa4h"]
 
+[ext_resource type="Script" uid="uid://b2ybtgx7d2yg7" path="res://enemy_controller.gd" id="1_7w86a"]
 [ext_resource type="Script" uid="uid://dbtvmyheio217" path="res://level_manager.gd" id="1_s2wow"]
-[ext_resource type="PackedScene" uid="uid://7bjf0rioc8tp" path="res://torre.tscn" id="2_7w86a"]
+[ext_resource type="PackedScene" uid="uid://7bjf0rioc8tp" path="res://torres/torre_slot.tscn" id="2_7w86a"]
+[ext_resource type="Resource" uid="uid://cxiv0eyd0bcn" path="res://resources/torre1.tres" id="3_4iivt"]
+[ext_resource type="PackedScene" uid="uid://dar48x5x488s2" path="res://torres/torre.tscn" id="4_3iyrq"]
 
 [sub_resource type="Curve2D" id="Curve2D_3iyrq"]
 _data = {
@@ -11,25 +14,30 @@ point_count = 7
 
 [node name="Level_teste" type="Node" unique_id=6352120]
 script = ExtResource("1_s2wow")
+selected_tower_scene = ExtResource("4_3iyrq")
+selected_tower_status = ExtResource("3_4iivt")
+
+[node name="enemy_controller" type="Node" parent="." unique_id=539663578]
+script = ExtResource("1_7w86a")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1374995746]
 position = Vector2(92, 87)
 curve = SubResource("Curve2D_3iyrq")
 
-[node name="Torre" parent="." unique_id=729895132 instance=ExtResource("2_7w86a")]
-offset_left = 300.0
-offset_top = 388.0
-offset_right = 361.0
-offset_bottom = 438.0
+[node name="Torre_slot" parent="." unique_id=729895132 instance=ExtResource("2_7w86a")]
+offset_left = -286.5
+offset_top = -157.0
+offset_right = -225.5
+offset_bottom = -107.0
 
-[node name="Torre2" parent="." unique_id=215428762 instance=ExtResource("2_7w86a")]
-offset_left = 806.0
-offset_top = 181.0
-offset_right = 867.0
-offset_bottom = 231.0
+[node name="Torre_slot2" parent="." unique_id=1986241474 instance=ExtResource("2_7w86a")]
+offset_left = 237.5
+offset_top = 191.0
+offset_right = 298.5
+offset_bottom = 241.0
 
-[node name="Torre3" parent="." unique_id=1814572505 instance=ExtResource("2_7w86a")]
-offset_left = 808.0
-offset_top = 529.0
-offset_right = 869.0
-offset_bottom = 579.0
+[node name="Torre_slot3" parent="." unique_id=511510708 instance=ExtResource("2_7w86a")]
+offset_left = 237.5
+offset_top = -133.0
+offset_right = 298.5
+offset_bottom = -83.0

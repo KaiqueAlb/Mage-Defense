@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://7bjf0rioc8tp"]
+
+[ext_resource type="Script" uid="uid://cbqmtmvtngypd" path="res://torres/torre_slot.gd" id="1_n36cb"]
+
+[node name="Torre_slot" type="Button" unique_id=729895132]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.5
+offset_top = -25.0
+offset_right = 30.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = ":3"
+script = ExtResource("1_n36cb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=173808158]
+hframes = 5
+vframes = 5

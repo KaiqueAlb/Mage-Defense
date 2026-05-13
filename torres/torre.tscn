@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dar48x5x488s2"]
+
+[ext_resource type="Script" uid="uid://cq0f4tuq262hq" path="res://torres/torre.gd" id="1_n36cb"]
+[ext_resource type="Script" uid="uid://v1vskglcruqb" path="res://Scripts/resources/status_torre.gd" id="2_hcsi4"]
+
+[sub_resource type="Resource" id="Resource_hcsi4"]
+script = ExtResource("2_hcsi4")
+metadata/_custom_type_script = "uid://v1vskglcruqb"
+
+[node name="Button" type="Button" unique_id=962178586]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n36cb")
+status = SubResource("Resource_hcsi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1736027026]
+hframes = 6
+vframes = 5

@@ -4,7 +4,7 @@ var enemy = preload("res://inimigo.tscn")
 
 @export var wave: int = 1
 @export var enemy_count = 3
-@onready var enemy_path: Path2D = $Path2D
+@onready var enemy_path: Path2D = $"../Path2D"
 var timer_to_spawn: int = 0;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
