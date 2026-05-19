@@ -11,4 +11,6 @@ func _button_pressed() -> void:
 		tower.status = level_manager.selected_tower_status
 		add_child(tower)
 		tower.position = Vector2.ZERO
+		tower.position.x +=25
+		tower.position.y +=25
 		disabled = true

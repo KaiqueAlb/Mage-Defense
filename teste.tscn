@@ -25,19 +25,7 @@ position = Vector2(92, 87)
 curve = SubResource("Curve2D_3iyrq")
 
 [node name="Torre_slot" parent="." unique_id=729895132 instance=ExtResource("2_7w86a")]
-offset_left = -286.5
-offset_top = -157.0
-offset_right = -225.5
-offset_bottom = -107.0
-
-[node name="Torre_slot2" parent="." unique_id=1986241474 instance=ExtResource("2_7w86a")]
-offset_left = 237.5
-offset_top = 191.0
-offset_right = 298.5
-offset_bottom = 241.0
-
-[node name="Torre_slot3" parent="." unique_id=511510708 instance=ExtResource("2_7w86a")]
-offset_left = 237.5
-offset_top = -133.0
-offset_right = 298.5
-offset_bottom = -83.0
+offset_left = -309.0
+offset_top = -179.0
+offset_right = -259.0
+offset_bottom = -129.0
