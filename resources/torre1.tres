@@ -7,6 +7,7 @@ load_path = "res://.godot/imported/towers_walls_blank.png-112200235244833c81cff6
 
 [resource]
 script = ExtResource("1_owokv")
-dano = 1
+dano = 3
 vel = 120.0
+range = 15.0
 sprite = SubResource("CompressedTexture2D_hvn2s")

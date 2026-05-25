@@ -7,6 +7,8 @@
 script = ExtResource("2_hcsi4")
 metadata/_custom_type_script = "uid://v1vskglcruqb"
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hcsi4"]
+
 [node name="Button" type="Button" unique_id=962178586]
 anchors_preset = 8
 anchor_left = 0.5
@@ -25,3 +27,9 @@ status = SubResource("Resource_hcsi4")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1736027026]
 hframes = 6
 vframes = 5
+
+[node name="Area2D" type="Area2D" parent="." unique_id=921634105]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1272612924]
+shape = SubResource("CircleShape2D_hcsi4")
+one_way_collision_margin = 19.0
