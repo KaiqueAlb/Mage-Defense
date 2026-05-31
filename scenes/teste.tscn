@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://6igp5br7wa4h"]
+
+[ext_resource type="Script" uid="uid://dbtvmyheio217" path="res://Scripts/level_manager.gd" id="1_8cswh"]
+[ext_resource type="PackedScene" uid="uid://dar48x5x488s2" path="res://torres/torre.tscn" id="2_6cgey"]
+[ext_resource type="Resource" uid="uid://cxiv0eyd0bcn" path="res://resources/torre1.tres" id="3_mjdn2"]
+[ext_resource type="Script" uid="uid://b2ybtgx7d2yg7" path="res://Scripts/enemy_controller.gd" id="4_375g6"]
+[ext_resource type="PackedScene" uid="uid://7bjf0rioc8tp" path="res://torres/torre_slot.tscn" id="5_8ytie"]
+
+[sub_resource type="Curve2D" id="Curve2D_3iyrq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, -1, 0, 0, 0, 0, -2, 238, 0, 0, 0, 0, 509, 234, 0, 0, 0, 0, 507, 14, 0, 0, 0, 0, 951, 10, 0, 0, 0, 0, 953, 555, 0, 0, 0, 0, 196, 554)
+}
+point_count = 7
+
+[node name="Level_teste" type="Node" unique_id=6352120]
+script = ExtResource("1_8cswh")
+selected_tower_scene = ExtResource("2_6cgey")
+selected_tower_status = ExtResource("3_mjdn2")
+
+[node name="enemy_controller" type="Node" parent="." unique_id=539663578]
+script = ExtResource("4_375g6")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1374995746]
+position = Vector2(92, 87)
+curve = SubResource("Curve2D_3iyrq")
+
+[node name="Torre_slot" parent="." unique_id=729895132 instance=ExtResource("5_8ytie")]
+offset_left = -309.0
+offset_top = -179.0
+offset_right = -259.0
+offset_bottom = -129.0
