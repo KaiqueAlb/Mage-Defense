@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dbtvmyheio217" path="res://Scripts/level_manager.gd" id="1_8cswh"]
 [ext_resource type="PackedScene" uid="uid://dar48x5x488s2" path="res://torres/torre.tscn" id="2_6cgey"]
 [ext_resource type="Resource" uid="uid://cxiv0eyd0bcn" path="res://resources/torre1.tres" id="3_mjdn2"]
+[ext_resource type="Texture2D" uid="uid://qldl2ja6edcf" path="res://assets/Background.png" id="4_6cgey"]
 [ext_resource type="Script" uid="uid://b2ybtgx7d2yg7" path="res://Scripts/enemy_controller.gd" id="4_375g6"]
 [ext_resource type="PackedScene" uid="uid://7bjf0rioc8tp" path="res://torres/torre_slot.tscn" id="5_8ytie"]
 
@@ -16,6 +17,11 @@ point_count = 7
 script = ExtResource("1_8cswh")
 selected_tower_scene = ExtResource("2_6cgey")
 selected_tower_status = ExtResource("3_mjdn2")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1621648253]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_6cgey")
 
 [node name="enemy_controller" type="Node" parent="." unique_id=539663578]
 script = ExtResource("4_375g6")

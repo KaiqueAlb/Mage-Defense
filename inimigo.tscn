@@ -41,6 +41,8 @@ _data = {
 &"new_animation": SubResource("Animation_enrbn")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0b8xr"]
+
 [node name="Inimigo" type="PathFollow2D" unique_id=2051060067]
 loop = false
 script = ExtResource("1_030df")
@@ -48,7 +50,13 @@ status = ExtResource("2_0b8xr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=500695801]
 rotation = 1.5707964
-hframes = 2
+scale = Vector2(0.6, 0.6)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=619704945]
 libraries/ = SubResource("AnimationLibrary_l0fh3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1970186168]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1354223910]
+shape = SubResource("RectangleShape2D_0b8xr")

@@ -5,20 +5,27 @@ extends PathFollow2D
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var anim: AnimationPlayer = $AnimationPlayer
+@onready var hitbox: Area2D = $Area2D
+
+var vida := 10
 
 func _ready() -> void:
 	sprite.texture = status.sprite
-	anim.play("new_animation")
-
+	hitbox.add_to_group("inimigos")
 
 func _process(delta: float) -> void:
 	_mover(delta)
-	_morrer()
+	rotation = 180
+	_fim_do_caminho()
 
-
-func _mover(delta:float) -> void:
+func _mover(delta: float) -> void:
 	progress += delta * status.vel
 
-func _morrer():
+func receber_dano(valor: int):
+	vida -= valor
+	if vida <= 0:
+		queue_free()
+
+func _fim_do_caminho():
 	if progress_ratio >= 1.0:
 		queue_free()

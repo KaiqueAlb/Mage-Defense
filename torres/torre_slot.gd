@@ -9,8 +9,10 @@ func _button_pressed() -> void:
 	if level_manager.selected_tower_scene:
 		var tower = level_manager.selected_tower_scene.instantiate()
 		tower.status = level_manager.selected_tower_status
-		add_child(tower)
+		get_node("/root").add_child(tower)
+		tower.global_position = global_position
+		hide()
 		tower.position = Vector2.ZERO
-		tower.position.x +=25
-		tower.position.y +=25
+		tower.position.x = position.x
+		tower.position.y = position.y
 		disabled = true

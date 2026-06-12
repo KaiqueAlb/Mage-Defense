@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://dar48x5x488s2"]
 
 [ext_resource type="Script" uid="uid://cq0f4tuq262hq" path="res://torres/torre.gd" id="1_n36cb"]
-[ext_resource type="Script" uid="uid://v1vskglcruqb" path="res://Scripts/resources/status_torre.gd" id="2_hcsi4"]
 
-[sub_resource type="Resource" id="Resource_hcsi4"]
-script = ExtResource("2_hcsi4")
-metadata/_custom_type_script = "uid://v1vskglcruqb"
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xxpgf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hcsi4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_04h0r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vpkku"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_isc5a"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hcsi4"]
 
@@ -21,15 +26,20 @@ offset_right = 4.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xxpgf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hcsi4")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_04h0r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vpkku")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_isc5a")
 script = ExtResource("1_n36cb")
-status = SubResource("Resource_hcsi4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1736027026]
-hframes = 6
-vframes = 5
+scale = Vector2(0.6, 0.6)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=921634105]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1272612924]
+visible = false
 shape = SubResource("CircleShape2D_hcsi4")
 one_way_collision_margin = 19.0

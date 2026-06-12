@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bi455sufsoill"]
+
+[ext_resource type="Script" uid="uid://crnrofkwknxh3" path="res://scenes/projetil.gd" id="1_5iet8"]
+[ext_resource type="Texture2D" uid="uid://b43ybgqm5bqev" path="res://assets/bala.jpg" id="2_ri8ot"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2mahr"]
+
+[node name="Projetil" type="Node2D" unique_id=1831404661]
+script = ExtResource("1_5iet8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2040398315]
+scale = Vector2(-0.305, -0.305)
+texture = ExtResource("2_ri8ot")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=623841495]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=139967992]
+shape = SubResource("CircleShape2D_2mahr")
