@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd7syppyt2q6d"
-path="res://.godot/imported/Cataputa2.png-38be1c6ed2b861d97fb618e936cb2b42.ctex"
+uid="uid://co5qt7eciy0uh"
+path="res://.godot/imported/LancaLancasProjetil.png-8ee11ce0d1a67b440ec0391db1e155c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cataputa2.png"
-dest_files=["res://.godot/imported/Cataputa2.png-38be1c6ed2b861d97fb618e936cb2b42.ctex"]
+source_file="res://sprites/towers/LancaLancasProjetil.png"
+dest_files=["res://.godot/imported/LancaLancasProjetil.png-8ee11ce0d1a67b440ec0391db1e155c1.ctex"]
 
 [params]
 

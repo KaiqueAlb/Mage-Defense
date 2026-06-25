@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bi455sufsoill"]
 
 [ext_resource type="Script" uid="uid://crnrofkwknxh3" path="res://scenes/projetil.gd" id="1_5iet8"]
-[ext_resource type="Texture2D" uid="uid://bfhb8iq4x7gcm" path="res://assets/CataputaProjetil.png" id="2_ri8ot"]
+[ext_resource type="Texture2D" uid="uid://bfhb8iq4x7gcm" path="res://sprites/towers/CataputaProjetil.png" id="2_ri8ot"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2mahr"]
 radius = 15.0

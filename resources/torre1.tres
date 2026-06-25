@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="StatusTorre" format=3 uid="uid://cxiv0eyd0bcn"]
 
 [ext_resource type="Script" uid="uid://v1vskglcruqb" path="res://Scripts/resources/status_torre.gd" id="1_owokv"]
-[ext_resource type="Texture2D" uid="uid://dd7syppyt2q6d" path="res://assets/Cataputa2.png" id="2_hvn2s"]
+[ext_resource type="Texture2D" uid="uid://dd7syppyt2q6d" path="res://sprites/towers/Cataputa2.png" id="2_hvn2s"]
 
 [resource]
 script = ExtResource("1_owokv")

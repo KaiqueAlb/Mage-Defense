@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfhb8iq4x7gcm"
-path="res://.godot/imported/CataputaProjetil.png-0462a23319f27ffadc4c24d49109d5b9.ctex"
+uid="uid://uqfxgkk6sw44"
+path="res://.godot/imported/Dinossauro.png-a1ab36f0a032531684c58c89e15a18b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CataputaProjetil.png"
-dest_files=["res://.godot/imported/CataputaProjetil.png-0462a23319f27ffadc4c24d49109d5b9.ctex"]
+source_file="res://sprites/inimigos/Dinossauro.png"
+dest_files=["res://.godot/imported/Dinossauro.png-a1ab36f0a032531684c58c89e15a18b9.ctex"]
 
 [params]
 

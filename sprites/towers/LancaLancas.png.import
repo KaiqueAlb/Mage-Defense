@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uqfxgkk6sw44"
-path="res://.godot/imported/Dinossauro.png-671416ac9d77baa71dabd1685ed4b77c.ctex"
+uid="uid://2qwj2ww0nieg"
+path="res://.godot/imported/LancaLancas.png-d72df4ffd5af4dba8cd26489126d819c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dinossauro.png"
-dest_files=["res://.godot/imported/Dinossauro.png-671416ac9d77baa71dabd1685ed4b77c.ctex"]
+source_file="res://sprites/towers/LancaLancas.png"
+dest_files=["res://.godot/imported/LancaLancas.png-d72df4ffd5af4dba8cd26489126d819c.ctex"]
 
 [params]
 

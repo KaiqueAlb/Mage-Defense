@@ -43,3 +43,17 @@ offset_bottom = 347.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 0
+
+[node name="Torre_slot_2" parent="." unique_id=928274221 instance=ExtResource("5_8ytie")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 673.0
+offset_top = 147.0
+offset_right = 875.0
+offset_bottom = 360.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 0
