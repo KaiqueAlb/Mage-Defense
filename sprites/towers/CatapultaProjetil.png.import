@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfhb8iq4x7gcm"
-path="res://.godot/imported/CataputaProjetil.png-65a959283b292dac6e58f9418f762f9f.ctex"
+path="res://.godot/imported/CatapultaProjetil.png-2aeb1ff971c40b9cb31c3c7a4790d803.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/towers/CataputaProjetil.png"
-dest_files=["res://.godot/imported/CataputaProjetil.png-65a959283b292dac6e58f9418f762f9f.ctex"]
+source_file="res://sprites/towers/CatapultaProjetil.png"
+dest_files=["res://.godot/imported/CatapultaProjetil.png-2aeb1ff971c40b9cb31c3c7a4790d803.ctex"]
 
 [params]
 

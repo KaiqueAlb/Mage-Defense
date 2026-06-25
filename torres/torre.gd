@@ -43,7 +43,7 @@ func attack(alvo: Area2D) -> void:
 		return
 
 	var projetil = projetil_scene.instantiate()
-
+	projetil.get_node("Sprite2D").texture = status.projectile
 	get_tree().current_scene.add_child(projetil)
 
 	projetil.global_position = global_position

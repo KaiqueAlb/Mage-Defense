@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd7syppyt2q6d"
-path="res://.godot/imported/Cataputa2.png-3b9c5a740a70d00bbfd819120e3066b9.ctex"
+uid="uid://mnue3dsd338y"
+path="res://.godot/imported/Catapulta.png-dc7c970acbc93140640054d8b3a7b999.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/towers/Cataputa2.png"
-dest_files=["res://.godot/imported/Cataputa2.png-3b9c5a740a70d00bbfd819120e3066b9.ctex"]
+source_file="res://sprites/towers/Catapulta.png"
+dest_files=["res://.godot/imported/Catapulta.png-dc7c970acbc93140640054d8b3a7b999.ctex"]
 
 [params]
 

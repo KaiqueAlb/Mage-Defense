@@ -3,7 +3,7 @@ extends Node
 @export var selected_tower_scene: PackedScene
 @export var selected_tower_status: StatusTorre
 
-var choose_tower = true;
+var choose_tower := true
 
 func _ready() -> void:
 	pass

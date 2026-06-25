@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StatusTorre" format=3 uid="uid://cmvwcy0nbit64"]
+
+[ext_resource type="Script" uid="uid://v1vskglcruqb" path="res://Scripts/resources/status_torre.gd" id="1_qb1sw"]
+[ext_resource type="Texture2D" uid="uid://co5qt7eciy0uh" path="res://sprites/towers/BalestraProjetil.png" id="1_wn4b5"]
+[ext_resource type="Texture2D" uid="uid://cr7kqom8trkcu" path="res://sprites/towers/Balestra.png" id="2_qb1sw"]
+
+[resource]
+script = ExtResource("1_qb1sw")
+dano = 5
+vel = 0.3
+range = 20.0
+sprite = ExtResource("2_qb1sw")
+projectile = ExtResource("1_wn4b5")

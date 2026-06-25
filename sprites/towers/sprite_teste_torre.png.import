@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b43ybgqm5bqev"
-path="res://.godot/imported/bala.jpg-e3f04e93db422618e6173cea30d79345.ctex"
+uid="uid://cbsecknmhswur"
+path="res://.godot/imported/sprite_teste_torre.png-e2a5c4a51e8c5a46dcc0f4acb9976876.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bala.jpg"
-dest_files=["res://.godot/imported/bala.jpg-e3f04e93db422618e6173cea30d79345.ctex"]
+source_file="res://sprites/towers/sprite_teste_torre.png"
+dest_files=["res://.godot/imported/sprite_teste_torre.png-e2a5c4a51e8c5a46dcc0f4acb9976876.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2qwj2ww0nieg"
-path="res://.godot/imported/LancaLancas.png-d72df4ffd5af4dba8cd26489126d819c.ctex"
+uid="uid://co5qt7eciy0uh"
+path="res://.godot/imported/BalestraProjetil.png-65637afe1b846b9484287cce06adf3de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/towers/LancaLancas.png"
-dest_files=["res://.godot/imported/LancaLancas.png-d72df4ffd5af4dba8cd26489126d819c.ctex"]
+source_file="res://sprites/towers/BalestraProjetil.png"
+dest_files=["res://.godot/imported/BalestraProjetil.png-65637afe1b846b9484287cce06adf3de.ctex"]
 
 [params]
 

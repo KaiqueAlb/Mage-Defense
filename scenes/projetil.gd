@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var area: Area2D = $Area2D
+@onready var sprite: Sprite2D = $Sprite2D
 
 var alvo: Area2D
 var dano := 1
