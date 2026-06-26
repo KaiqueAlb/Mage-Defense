@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("1_qb1sw")
 dano = 5
-vel = 0.3
+vel = 3.0
 range = 20.0
 sprite = ExtResource("2_qb1sw")
 projectile = ExtResource("1_wn4b5")

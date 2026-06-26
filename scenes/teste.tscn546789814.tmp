@@ -7,9 +7,6 @@
 [ext_resource type="Script" uid="uid://b2ybtgx7d2yg7" path="res://Scripts/enemy_controller.gd" id="4_375g6"]
 [ext_resource type="PackedScene" uid="uid://7bjf0rioc8tp" path="res://torres/torre_slot.tscn" id="5_8ytie"]
 [ext_resource type="PackedScene" uid="uid://bwirxrgwu68vh" path="res://scenes/choose_tower.tscn" id="7_mjdn2"]
-[ext_resource type="Script" uid="uid://v1vskglcruqb" path="res://Scripts/resources/status_torre.gd" id="8_im8u8"]
-[ext_resource type="Resource" uid="uid://cmvwcy0nbit64" path="res://resources/torre_balestra_movel.tres" id="9_w8l1l"]
-[ext_resource type="Resource" uid="uid://ck8lnsinknjyb" path="res://resources/torre_teste.tres" id="10_molfm"]
 
 [sub_resource type="Curve2D" id="Curve2D_3iyrq"]
 _data = {
@@ -63,5 +60,3 @@ grow_vertical = 1
 size_flags_horizontal = 0
 
 [node name="ChooseTower" parent="." unique_id=23892639 instance=ExtResource("7_mjdn2")]
-tower_scenes = Array[PackedScene]([ExtResource("2_6cgey"), ExtResource("2_6cgey"), ExtResource("2_6cgey")])
-tower_status = Array[ExtResource("8_im8u8")]([ExtResource("9_w8l1l"), ExtResource("3_mjdn2"), ExtResource("10_molfm")])
