@@ -36,7 +36,6 @@ func escolher_torre(opcao: int):
 
 
 func _on_torre_1_input_event(viewport, event, shape_idx):
-	print("clicou torre 1")
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		escolher_torre(0)
 

@@ -2,9 +2,6 @@
 
 [ext_resource type="Script" uid="uid://w7f7og2uodwf" path="res://scenes/choose_tower.gd" id="1_5ganx"]
 [ext_resource type="Texture2D" uid="uid://qldl2ja6edcf" path="res://assets/Background.png" id="1_wgh4y"]
-[ext_resource type="Texture2D" uid="uid://mnue3dsd338y" path="res://sprites/towers/Catapulta.png" id="2_0nlsj"]
-[ext_resource type="Texture2D" uid="uid://cr7kqom8trkcu" path="res://sprites/towers/Balestra.png" id="3_e0kj4"]
-[ext_resource type="Texture2D" uid="uid://cbsecknmhswur" path="res://sprites/towers/sprite_teste_torre.png" id="4_e0kj4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7ode"]
 
@@ -22,7 +19,6 @@ scale = Vector2(0.25, 0.25)
 
 [node name="Sprite2D" type="Sprite2D" parent="Torre3" unique_id=1617761210]
 scale = Vector2(2, 2)
-texture = ExtResource("4_e0kj4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torre3" unique_id=1425787010]
 scale = Vector2(24, 24)
@@ -33,7 +29,6 @@ position = Vector2(725, 323)
 scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Torre2" unique_id=1546855070]
-texture = ExtResource("2_0nlsj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torre2" unique_id=1771275638]
 scale = Vector2(12, 12)
@@ -44,7 +39,6 @@ position = Vector2(405, 323)
 scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Torre1" unique_id=423976600]
-texture = ExtResource("3_e0kj4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torre1" unique_id=236022648]
 scale = Vector2(12, 12)
