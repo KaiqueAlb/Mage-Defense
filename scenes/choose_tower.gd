@@ -4,6 +4,7 @@ extends Node2D
 @export var tower_status: Array[StatusTorre]
 
 @onready var level_manager = get_parent()
+@onready var info = $RichTextLabel
 
 @onready var torres := [
 	$Torre1,
@@ -21,8 +22,9 @@ func _ready() -> void:
 		torres_sorteadas.append(i)
 
 	torres_sorteadas.shuffle()
-
+	print(torres_sorteadas)
 	for i in range(3):
+		print("Torre", i, "recebe índice", torres_sorteadas[i])
 		torres[i].get_node("Sprite2D").texture = tower_status[torres_sorteadas[i]].sprite
 
 func escolher_torre(opcao: int):
@@ -47,3 +49,42 @@ func _on_torre_3_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		escolher_torre(2)
 		
+func _on_torre_1_mouse_entered():
+	var indice = torres_sorteadas[0]
+	print("torre 1 entrou")
+	info.text = "Dano: %d Alcance: %d Velocidade: %.2f" % [
+		tower_status[indice].dano,
+		tower_status[indice].range,
+		tower_status[indice].vel
+	]
+	info.show()
+	
+func _on_torre_1_mouse_exited():
+	info.text = "Escolha uma torre, passe o mouse em cima para checar suas informações"
+	
+func _on_torre_2_mouse_entered():
+	var indice = torres_sorteadas[1]
+	print("torre 2 entrou")
+	info.text = "Dano: %d Alcance: %d Velocidade: %.2f" % [
+		tower_status[indice].dano,
+		tower_status[indice].range,
+		tower_status[indice].vel
+	]
+	info.show()
+
+	
+func _on_torre_2_mouse_exited():
+	info.text = "Escolha uma torre, passe o mouse em cima para checar suas informações"
+	
+func _on_torre_3_mouse_entered():
+	var indice = torres_sorteadas[2]
+	print("torre 3 entrou")
+	info.text = "Dano: %d Alcance: %d Velocidade: %.2f" % [
+		tower_status[indice].dano,
+		tower_status[indice].range,
+		tower_status[indice].vel
+	]
+	info.show()
+
+func _on_torre_3_mouse_exited():
+	info.text = "Escolha uma torre, passe o mouse em cima para checar suas informações"

@@ -2,11 +2,19 @@
 
 [ext_resource type="Script" uid="uid://w7f7og2uodwf" path="res://scenes/choose_tower.gd" id="1_5ganx"]
 [ext_resource type="Texture2D" uid="uid://qldl2ja6edcf" path="res://assets/Background.png" id="1_wgh4y"]
+[ext_resource type="Texture2D" uid="uid://n42b5xqqjnxj" path="res://assets/fundoescuro.jpg" id="2_e0kj4"]
+[ext_resource type="FontFile" uid="uid://bn6hfjgb4vu7u" path="res://fonts/DeliciousHandrawn-Regular.ttf" id="3_0nlsj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7ode"]
 
 [node name="ChooseTower" type="Node2D" unique_id=23892639]
 script = ExtResource("1_5ganx")
+
+[node name="Fundoescuro" type="Sprite2D" parent="." unique_id=1789042175]
+modulate = Color(1, 1, 1, 0.50980395)
+position = Vector2(576, 323)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_e0kj4")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=497472335]
 position = Vector2(576, 323)
@@ -14,7 +22,7 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_wgh4y")
 
 [node name="Torre3" type="Area2D" parent="." unique_id=577755842]
-position = Vector2(576, 323)
+position = Vector2(724, 323)
 scale = Vector2(0.25, 0.25)
 
 [node name="Sprite2D" type="Sprite2D" parent="Torre3" unique_id=1617761210]
@@ -25,7 +33,7 @@ scale = Vector2(24, 24)
 shape = SubResource("RectangleShape2D_c7ode")
 
 [node name="Torre2" type="Area2D" parent="." unique_id=171491262]
-position = Vector2(725, 323)
+position = Vector2(576, 323)
 scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Torre2" unique_id=1546855070]
@@ -44,6 +52,33 @@ scale = Vector2(0.5, 0.5)
 scale = Vector2(12, 12)
 shape = SubResource("RectangleShape2D_c7ode")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1057364979]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 342.0
+offset_top = 394.0
+offset_right = 786.0
+offset_bottom = 464.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_0nlsj")
+theme_override_font_sizes/normal_font_size = 25
+text = "Escolha uma torre, passe o mouse em cima para checar suas informações
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="input_event" from="Torre3" to="." method="_on_torre_3_input_event"]
+[connection signal="mouse_entered" from="Torre3" to="." method="_on_torre_3_mouse_entered"]
+[connection signal="mouse_exited" from="Torre3" to="." method="_on_torre_3_mouse_exited"]
 [connection signal="input_event" from="Torre2" to="." method="_on_torre_2_input_event"]
+[connection signal="mouse_entered" from="Torre2" to="." method="_on_torre_2_mouse_entered"]
+[connection signal="mouse_exited" from="Torre2" to="." method="_on_torre_2_mouse_exited"]
 [connection signal="input_event" from="Torre1" to="." method="_on_torre_1_input_event"]
+[connection signal="mouse_entered" from="Torre1" to="." method="_on_torre_1_mouse_entered"]
+[connection signal="mouse_exited" from="Torre1" to="." method="_on_torre_1_mouse_exited"]

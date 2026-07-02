@@ -63,5 +63,6 @@ grow_vertical = 1
 size_flags_horizontal = 0
 
 [node name="ChooseTower" parent="." unique_id=23892639 instance=ExtResource("7_mjdn2")]
+visible = false
 tower_scenes = Array[PackedScene]([ExtResource("2_6cgey"), ExtResource("2_6cgey"), ExtResource("2_6cgey")])
 tower_status = Array[ExtResource("8_im8u8")]([ExtResource("9_w8l1l"), ExtResource("3_mjdn2"), ExtResource("10_molfm")])

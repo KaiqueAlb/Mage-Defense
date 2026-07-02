@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://v1vskglcruqb" path="res://Scripts/resources/status_torre.gd" id="1_qb1sw"]
 [ext_resource type="Texture2D" uid="uid://co5qt7eciy0uh" path="res://sprites/towers/BalestraProjetil.png" id="1_wn4b5"]
-[ext_resource type="Texture2D" uid="uid://cr7kqom8trkcu" path="res://sprites/towers/Balestra.png" id="2_qb1sw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qb1sw"]
+load_path = "res://.godot/imported/Balestra.png-aa3b1b9191c53108f9092c6152cfd090.ctex"
 
 [resource]
 script = ExtResource("1_qb1sw")
 dano = 5
 vel = 3.0
 range = 20.0
-sprite = ExtResource("2_qb1sw")
+sprite = SubResource("CompressedTexture2D_qb1sw")
 projectile = ExtResource("1_wn4b5")
