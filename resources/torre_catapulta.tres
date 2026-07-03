@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_owokv")
-dano = 3
+dano = 1
 vel = 1.0
 range = 20.0
 sprite = ExtResource("3_bqa6t")

@@ -52,7 +52,7 @@ func _on_torre_3_input_event(viewport, event, shape_idx):
 func _on_torre_1_mouse_entered():
 	var indice = torres_sorteadas[0]
 	print("torre 1 entrou")
-	info.text = "Dano: %d Alcance: %d Velocidade: %.2f" % [
+	info.text = "Dano: %d Alcance: %d Tempo de recarga: %.2f" % [
 		tower_status[indice].dano,
 		tower_status[indice].range,
 		tower_status[indice].vel
@@ -65,7 +65,7 @@ func _on_torre_1_mouse_exited():
 func _on_torre_2_mouse_entered():
 	var indice = torres_sorteadas[1]
 	print("torre 2 entrou")
-	info.text = "Dano: %d Alcance: %d Velocidade: %.2f" % [
+	info.text = "Dano: %d Alcance: %d Tempo de recarga: %.2f" % [
 		tower_status[indice].dano,
 		tower_status[indice].range,
 		tower_status[indice].vel
@@ -79,7 +79,7 @@ func _on_torre_2_mouse_exited():
 func _on_torre_3_mouse_entered():
 	var indice = torres_sorteadas[2]
 	print("torre 3 entrou")
-	info.text = "Dano: %d Alcance: %d Velocidade: %.2f" % [
+	info.text = "Dano: %d Alcance: %d Tempo de recarga: %.2f" % [
 		tower_status[indice].dano,
 		tower_status[indice].range,
 		tower_status[indice].vel
