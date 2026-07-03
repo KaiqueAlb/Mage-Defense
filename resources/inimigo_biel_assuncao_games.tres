@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="StatusInimigo" format=3 uid="uid://hrj4vbp5a5f2"]
-
-[ext_resource type="Script" uid="uid://bh03th4qf21vk" path="res://Scripts/resources/status_inimigo.gd" id="1_dwjux"]
-
-[resource]
-script = ExtResource("1_dwjux")
-metadata/_custom_type_script = "uid://bh03th4qf21vk"

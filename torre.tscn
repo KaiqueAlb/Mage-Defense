@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://7bjf0rioc8tp"]
-
-[ext_resource type="Script" uid="uid://cbqmtmvtngypd" path="res://torre.gd" id="1_n36cb"]
-
-[node name="Torre" type="Button" unique_id=729895132]
-offset_right = 61.0
-offset_bottom = 50.0
-text = ":3"
-script = ExtResource("1_n36cb")
