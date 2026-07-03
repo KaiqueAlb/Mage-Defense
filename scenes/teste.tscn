@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://6igp5br7wa4h"]
+
+[ext_resource type="Script" uid="uid://dbtvmyheio217" path="res://Scripts/level_manager.gd" id="1_8cswh"]
+[ext_resource type="PackedScene" uid="uid://dar48x5x488s2" path="res://torres/torre.tscn" id="2_6cgey"]
+[ext_resource type="Resource" uid="uid://cxiv0eyd0bcn" path="res://resources/torre1.tres" id="3_mjdn2"]
+[ext_resource type="Texture2D" uid="uid://qldl2ja6edcf" path="res://assets/Background.png" id="4_6cgey"]
+[ext_resource type="Script" uid="uid://b2ybtgx7d2yg7" path="res://Scripts/enemy_controller.gd" id="4_375g6"]
+[ext_resource type="PackedScene" uid="uid://7bjf0rioc8tp" path="res://torres/torre_slot.tscn" id="5_8ytie"]
+[ext_resource type="Script" uid="uid://rr1pcpvnpd4e" path="res://ui_controller.gd" id="8_molfm"]
+[ext_resource type="Texture2D" uid="uid://cf8t3464naphy" path="res://scenes/Botao.png" id="9_o75pw"]
+[ext_resource type="Texture2D" uid="uid://evokiktu24on" path="res://assets/UI/VidaIcon.webp" id="10_23qcg"]
+[ext_resource type="Texture2D" uid="uid://csh57dg8dbgry" path="res://assets/UI/CoinIcon.webp" id="11_j8tyd"]
+[ext_resource type="Texture2D" uid="uid://beo7ftcnecek" path="res://assets/Mago_Torre.png" id="12_molfm"]
+
+[sub_resource type="Curve2D" id="Curve2D_3iyrq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, -1, 0, 0, 0, 0, -2, 238, 0, 0, 0, 0, 509, 234, 0, 0, 0, 0, 507, 14, 0, 0, 0, 0, 951, 10, 0, 0, 0, 0, 953, 555, 0, 0, 0, 0, 196, 554)
+}
+point_count = 7
+
+[node name="Level_teste" type="Node" unique_id=6352120 node_paths=PackedStringArray("ui_controller")]
+script = ExtResource("1_8cswh")
+selected_tower_scene = ExtResource("2_6cgey")
+selected_tower_status = ExtResource("3_mjdn2")
+ui_controller = NodePath("UI")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1621648253]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_6cgey")
+
+[node name="enemy_controller" type="Node" parent="." unique_id=539663578]
+script = ExtResource("4_375g6")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1374995746]
+position = Vector2(92, 87)
+curve = SubResource("Curve2D_3iyrq")
+
+[node name="Torre_slot" parent="." unique_id=729895132 instance=ExtResource("5_8ytie")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 159.0
+offset_top = 134.0
+offset_right = 361.0
+offset_bottom = 347.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 0
+
+[node name="UI" type="Control" parent="." unique_id=205915953]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("8_molfm")
+
+[node name="Header" type="Control" parent="UI" unique_id=2028948615]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="UI/Header" unique_id=578326466]
+layout_mode = 0
+offset_left = 22.000004
+offset_top = 19.000004
+offset_right = 1588.9808
+offset_bottom = 451.5582
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("9_o75pw")
+
+[node name="Vida" type="TextureRect" parent="UI/Header" unique_id=318220468]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 43.0
+offset_right = 148.0
+offset_bottom = 128.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_23qcg")
+
+[node name="dinheiro" type="TextureRect" parent="UI/Header" unique_id=1144704638]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 40.0
+offset_right = 297.0
+offset_bottom = 135.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_j8tyd")
+
+[node name="Vida Text" type="Label" parent="UI/Header" unique_id=113935374]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 115.0
+offset_top = 35.0
+offset_right = 166.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 36
+text = "= 0"
+
+[node name="Din Text" type="Label" parent="UI/Header" unique_id=1606039463]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 261.0
+offset_top = 36.0
+offset_right = 312.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 36
+text = "= 0"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1005274457]
+offset_left = 299.0
+offset_top = 475.0
+offset_right = 627.0
+offset_bottom = 1042.0
+scale = Vector2(-0.32, 0.32)
+texture = ExtResource("12_molfm")

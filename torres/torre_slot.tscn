@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://7bjf0rioc8tp"]
+
+[ext_resource type="Texture2D" uid="uid://b81ndo5knr5mt" path="res://assets/Torre_Botao.png" id="1_41824"]
+[ext_resource type="Script" uid="uid://cbqmtmvtngypd" path="res://torres/torre_slot.gd" id="1_n36cb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_41824"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0rqo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5fik"]
+
+[node name="Torre_slot" type="Button" unique_id=729895132]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.0
+offset_top = -110.5
+offset_right = 105.0
+offset_bottom = 110.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_icons/icon = ExtResource("1_41824")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_41824")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m0rqo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_i5fik")
+script = ExtResource("1_n36cb")
