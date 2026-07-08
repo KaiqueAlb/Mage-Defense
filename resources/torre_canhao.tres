@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="StatusTorre" format=3 uid="uid://ck8lnsinknjyb"]
+
+[ext_resource type="Script" uid="uid://c58er3kbcgmdj" path="res://Scripts/resources/status_magia.gd" id="1_5ofw1"]
+[ext_resource type="Texture2D" uid="uid://bdrw2c3sm0ui7" path="res://sprites/towers/CanhaoProjetil.png" id="2_oxeui"]
+[ext_resource type="Script" uid="uid://v1vskglcruqb" path="res://Scripts/resources/status_torre.gd" id="3_okepo"]
+[ext_resource type="Texture2D" uid="uid://csfxn3yx7wyp5" path="res://sprites/towers/CanhaoTorreta.png" id="4_w0avg"]
+
+[resource]
+script = ExtResource("3_okepo")
+dano = 8
+vel = 5.0
+alcance = 10.0
+sprite = ExtResource("4_w0avg")
+projectile = ExtResource("2_oxeui")

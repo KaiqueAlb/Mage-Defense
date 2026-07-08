@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://7bjf0rioc8tp"]
 
 [ext_resource type="Texture2D" uid="uid://b81ndo5knr5mt" path="res://assets/Torre_Botao.png" id="1_41824"]
-[ext_resource type="Script" uid="uid://cbqmtmvtngypd" path="res://torres/torre_slot.gd" id="1_n36cb"]
+[ext_resource type="Script" uid="uid://cbqmtmvtngypd" path="res://Scripts/torre_slot.gd" id="1_n36cb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_41824"]
 

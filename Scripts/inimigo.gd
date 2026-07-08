@@ -6,6 +6,8 @@ extends PathFollow2D
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var hitbox: Area2D = $Area2D
+@onready var enemy_controller: Node = $"../../enemy_controller"
+@onready var level_manager = get_parent().get_parent()
 
 var vida := 10
 
@@ -24,8 +26,14 @@ func _mover(delta: float) -> void:
 func receber_dano(valor: int):
 	vida -= valor
 	if vida <= 0:
+		level_manager.ganhar_dinheiro(5)
+		enemy_controller.enemy_alive-=1
+		print(enemy_controller.enemy_alive)
 		queue_free()
 
 func _fim_do_caminho():
 	if progress_ratio >= 1.0:
+		level_manager.tomar_dano(1)
+		enemy_controller.enemy_alive-=1
+		print(enemy_controller.enemy_alive)
 		queue_free()

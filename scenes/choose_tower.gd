@@ -24,7 +24,6 @@ func _ready() -> void:
 	torres_sorteadas.shuffle()
 	print(torres_sorteadas)
 	for i in range(3):
-		print("Torre", i, "recebe índice", torres_sorteadas[i])
 		torres[i].get_node("Sprite2D").texture = tower_status[torres_sorteadas[i]].sprite
 
 func escolher_torre(opcao: int):
@@ -54,7 +53,7 @@ func _on_torre_1_mouse_entered():
 	print("torre 1 entrou")
 	info.text = "Dano: %d Alcance: %d Tempo de recarga: %.2f" % [
 		tower_status[indice].dano,
-		tower_status[indice].range,
+		tower_status[indice].alcance,
 		tower_status[indice].vel
 	]
 	info.show()
@@ -67,7 +66,7 @@ func _on_torre_2_mouse_entered():
 	print("torre 2 entrou")
 	info.text = "Dano: %d Alcance: %d Tempo de recarga: %.2f" % [
 		tower_status[indice].dano,
-		tower_status[indice].range,
+		tower_status[indice].alcance,
 		tower_status[indice].vel
 	]
 	info.show()
@@ -81,7 +80,7 @@ func _on_torre_3_mouse_entered():
 	print("torre 3 entrou")
 	info.text = "Dano: %d Alcance: %d Tempo de recarga: %.2f" % [
 		tower_status[indice].dano,
-		tower_status[indice].range,
+		tower_status[indice].alcance,
 		tower_status[indice].vel
 	]
 	info.show()

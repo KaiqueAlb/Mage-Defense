@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bwirxrgwu68vh" path="res://scenes/choose_tower.tscn" id="7_mjdn2"]
 [ext_resource type="Script" uid="uid://v1vskglcruqb" path="res://Scripts/resources/status_torre.gd" id="8_im8u8"]
 [ext_resource type="Resource" uid="uid://cmvwcy0nbit64" path="res://resources/torre_balestra_movel.tres" id="9_w8l1l"]
-[ext_resource type="Resource" uid="uid://ck8lnsinknjyb" path="res://resources/torre_canhao.tres" id="10_molfm"]
+[ext_resource type="Resource" uid="uid://ck8lnsinknjyb" path="res://resources/torre_teste.tres" id="10_molfm"]
 [ext_resource type="Script" path="res://ui_controller.gd" id="11_molfm"]
 [ext_resource type="Texture2D" uid="uid://cf8t3464naphy" path="res://scenes/Botao.png" id="12_j8tyd"]
 [ext_resource type="Texture2D" uid="uid://beo7ftcnecek" path="res://assets/Mago_Torre.png" id="12_o75pw"]

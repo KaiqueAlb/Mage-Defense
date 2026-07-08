@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dar48x5x488s2"]
 
-[ext_resource type="Script" uid="uid://cq0f4tuq262hq" path="res://torres/torre.gd" id="1_n36cb"]
+[ext_resource type="Script" uid="uid://cq0f4tuq262hq" path="res://Scripts/torre.gd" id="1_n36cb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xxpgf"]
 
@@ -40,6 +40,5 @@ scale = Vector2(0.6, 0.6)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1272612924]
-visible = false
 shape = SubResource("CircleShape2D_hcsi4")
 one_way_collision_margin = 19.0
