@@ -14,4 +14,6 @@ func _button_pressed() -> void:
 		tower.position = Vector2.ZERO
 		tower.position.x = position.x + 100
 		tower.position.y = position.y + 100
+		level_manager.selected_tower_scene = null
+		level_manager.selected_tower_status = null
 		disabled = true

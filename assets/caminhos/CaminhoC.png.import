@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf8t3464naphy"
-path="res://.godot/imported/Botao.png-f0719bff9650cf480bc1679f36171e79.ctex"
+uid="uid://dbfs27swrp4o2"
+path="res://.godot/imported/CaminhoC.png-cd7e4c514dd62d907743aa562cee0d97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Botao.png"
-dest_files=["res://.godot/imported/Botao.png-f0719bff9650cf480bc1679f36171e79.ctex"]
+source_file="res://assets/caminhos/CaminhoC.png"
+dest_files=["res://.godot/imported/CaminhoC.png-cd7e4c514dd62d907743aa562cee0d97.ctex"]
 
 [params]
 

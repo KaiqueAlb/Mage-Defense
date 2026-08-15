@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bstmr3ycukrje"]
+
+[ext_resource type="Texture2D" uid="uid://qldl2ja6edcf" path="res://assets/Background.png" id="1_aifk4"]
+
+[node name="Market" type="Node2D" unique_id=1087702280]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=592100804]
+position = Vector2(601, 322)
+scale = Vector2(0.3171296, 0.3171296)
+texture = ExtResource("1_aifk4")

@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bnpfxgkbb0or5"]
+
+[ext_resource type="FontFile" uid="uid://bn6hfjgb4vu7u" path="res://fonts/DeliciousHandrawn-Regular.ttf" id="1_kt3wp"]
+[ext_resource type="Texture2D" uid="uid://cf8t3464naphy" path="res://assets/UI/Botao.png" id="2_ij2q2"]
+[ext_resource type="Script" uid="uid://brmxlvkym54fc" path="res://scenes/next_wave.gd" id="3_ij2q2"]
+[ext_resource type="Script" uid="uid://dy70mwilsduc8" path="res://scenes/market.gd" id="4_1tmrk"]
+
+[node name="Control" type="Control" unique_id=1558067429]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -746.0
+offset_bottom = -581.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="next_wave" type="Button" parent="." unique_id=1119076181]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47931036
+anchor_top = 0.53360337
+anchor_right = 0.47931027
+anchor_bottom = 0.5336035
+offset_left = -191.6
+offset_top = -35.751427
+offset_right = 1168.4
+offset_bottom = 335.24857
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_kt3wp")
+theme_override_font_sizes/font_size = 100
+text = "PRÓXIMA ONDA"
+icon = ExtResource("2_ij2q2")
+flat = true
+icon_alignment = 1
+script = ExtResource("3_ij2q2")
+metadata/_edit_use_anchors_ = true
+
+[node name="market" type="Button" parent="." unique_id=1328778560]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.84482765
+anchor_top = 0.5
+anchor_right = 0.8448276
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -33.5
+offset_right = 1216.0
+offset_bottom = 337.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_kt3wp")
+theme_override_font_sizes/font_size = 100
+text = "MERCADO"
+icon = ExtResource("2_ij2q2")
+flat = true
+icon_alignment = 1
+script = ExtResource("4_1tmrk")
+metadata/_edit_use_anchors_ = true

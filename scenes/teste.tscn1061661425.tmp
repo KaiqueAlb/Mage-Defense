@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://dbfs27swrp4o2" path="res://assets/caminhos/CaminhoC.png" id="12_waasj"]
 [ext_resource type="Texture2D" uid="uid://evokiktu24on" path="res://assets/UI/VidaIcon.webp" id="13_fnj4p"]
 [ext_resource type="Texture2D" uid="uid://csh57dg8dbgry" path="res://assets/UI/CoinIcon.webp" id="14_8wkgm"]
-[ext_resource type="PackedScene" uid="uid://dqsg25ws4aabj" path="res://scenes/inventory.tscn" id="16_8x6af"]
 [ext_resource type="PackedScene" uid="uid://bnpfxgkbb0or5" path="res://scenes/market_e_next_wave.tscn" id="19_m0ka4"]
 
 [sub_resource type="Curve2D" id="Curve2D_3iyrq"]
@@ -145,6 +144,7 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("12_waasj")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1140576633]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -159,42 +159,58 @@ grow_vertical = 2
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("12_o75pw")
 
-[node name="Torre_slot_3" parent="." unique_id=953427452 instance=ExtResource("5_8ytie")]
-offset_left = 382.0
-offset_top = -322.0
-offset_right = 584.0
-offset_bottom = -109.0
-size_flags_horizontal = 0
-
-[node name="Inventory" parent="." unique_id=532727686 instance=ExtResource("16_8x6af")]
-
 [node name="Torre_slot" parent="." unique_id=729895132 instance=ExtResource("5_8ytie")]
-offset_left = -269.0
-offset_top = 0.0
-offset_right = -67.0
-offset_bottom = 213.0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 317.0
+offset_top = 324.0
+offset_right = 519.0
+offset_bottom = 537.0
+grow_horizontal = 1
+grow_vertical = 1
 size_flags_horizontal = 0
 
 [node name="Torre_slot_2" parent="." unique_id=928274221 instance=ExtResource("5_8ytie")]
-offset_left = 66.0
-offset_top = -126.0
-offset_right = 268.0
-offset_bottom = 87.0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 642.00006
+offset_top = 127.00003
+offset_right = 844.00006
+offset_bottom = 340.00003
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 0
+
+[node name="Torre_slot_3" parent="." unique_id=953427452 instance=ExtResource("5_8ytie")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 955.0
+offset_top = 18.0
+offset_right = 1157.0
+offset_bottom = 231.00003
+grow_horizontal = 1
+grow_vertical = 1
 size_flags_horizontal = 0
 
 [node name="market_e_next_wave" parent="." unique_id=1558067429 instance=ExtResource("19_m0ka4")]
-z_index = 9
+visible = false
 offset_left = 333.0
 offset_top = 35.0
-offset_right = -406.0
-offset_bottom = -561.0
+offset_right = 333.0
+offset_bottom = 35.0
 
 [node name="ChooseTower" parent="." unique_id=23892639 instance=ExtResource("7_mjdn2")]
-z_index = 10
-position = Vector2(0, 1)
 tower_scenes = Array[PackedScene]([ExtResource("2_6cgey"), ExtResource("2_6cgey"), ExtResource("2_6cgey")])
 tower_status = Array[ExtResource("8_im8u8")]([ExtResource("9_w8l1l"), ExtResource("3_mjdn2"), ExtResource("10_molfm")])
 
 [node name="market_buy" parent="." unique_id=1908597080 instance=ExtResource("5_waasj")]
 visible = false
-z_index = 10

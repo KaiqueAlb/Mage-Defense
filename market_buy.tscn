@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://dabri42ce3nu0"]
+
+[ext_resource type="Texture2D" uid="uid://n42b5xqqjnxj" path="res://assets/fundoescuro.jpg" id="1_n8ejh"]
+[ext_resource type="Script" uid="uid://cf8ewijkir3in" path="res://market_buy.gd" id="1_xkabj"]
+[ext_resource type="Script" uid="uid://c58er3kbcgmdj" path="res://Scripts/resources/status_magia.gd" id="2_30p85"]
+[ext_resource type="Texture2D" uid="uid://qldl2ja6edcf" path="res://assets/Background.png" id="2_xkabj"]
+[ext_resource type="Resource" uid="uid://cc5wsbtjb7hol" path="res://resources/magias/magia_dano_1.tres" id="3_js6oa"]
+[ext_resource type="FontFile" uid="uid://bn6hfjgb4vu7u" path="res://fonts/DeliciousHandrawn-Regular.ttf" id="4_1ek8r"]
+[ext_resource type="Resource" uid="uid://dy2olhu8f1hbq" path="res://resources/magias/magia_alcance_1.tres" id="4_01tgu"]
+[ext_resource type="Texture2D" uid="uid://cf8t3464naphy" path="res://assets/UI/Botao.png" id="5_6ptxu"]
+[ext_resource type="Resource" uid="uid://deaoh2caf1t18" path="res://resources/magias/magia_velocidade_1.tres" id="5_mq4as"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8ejh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30p85"]
+size = Vector2(1356.6665, 376.66675)
+
+[node name="Control" type="Node2D" unique_id=1908597080]
+script = ExtResource("1_xkabj")
+magia_status = Array[ExtResource("2_30p85")]([ExtResource("3_js6oa"), ExtResource("4_01tgu"), ExtResource("5_mq4as")])
+
+[node name="Fundoescuro" type="Sprite2D" parent="." unique_id=540495450]
+modulate = Color(1, 1, 1, 0.50980395)
+position = Vector2(576, 323)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_n8ejh")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=302605605]
+position = Vector2(576, 323)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_xkabj")
+
+[node name="Magia3" type="Area2D" parent="." unique_id=1218727242]
+position = Vector2(712, 244)
+scale = Vector2(0.25, 0.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="Magia3" unique_id=1872078424]
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Magia3" unique_id=786367593]
+scale = Vector2(24, 24)
+shape = SubResource("RectangleShape2D_n8ejh")
+
+[node name="Magia2" type="Area2D" parent="." unique_id=1512206330]
+position = Vector2(574, 244)
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Magia2" unique_id=489818994]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Magia2" unique_id=451794780]
+scale = Vector2(12, 12)
+shape = SubResource("RectangleShape2D_n8ejh")
+
+[node name="Magia1" type="Area2D" parent="." unique_id=572561311]
+position = Vector2(436, 244)
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Magia1" unique_id=1725594580]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Magia1" unique_id=1515859010]
+scale = Vector2(12, 12)
+shape = SubResource("RectangleShape2D_n8ejh")
+
+[node name="Close_market" type="RichTextLabel" parent="." unique_id=1494634561]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 818.0
+offset_top = 184.0
+offset_right = 844.0
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("4_1ek8r")
+theme_override_font_sizes/normal_font_size = 25
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=547664803]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 348.0
+offset_top = 322.0
+offset_right = 792.0
+offset_bottom = 392.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("4_1ek8r")
+theme_override_font_sizes/normal_font_size = 25
+text = "Escolha uma magia, passe o mouse em cima para checar suas informações
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button_confirmar" type="Button" parent="." unique_id=21824925]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 469.0
+offset_top = 409.0
+offset_right = 1829.0
+offset_bottom = 780.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_1ek8r")
+theme_override_font_sizes/font_size = 100
+text = "Confirmar compra"
+icon = ExtResource("5_6ptxu")
+flat = true
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="botao_confirmar" type="Area2D" parent="Button_confirmar" unique_id=2021661668]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button_confirmar/botao_confirmar" unique_id=1435949807]
+position = Vector2(666.6668, 193.33333)
+shape = SubResource("RectangleShape2D_30p85")
+
+[connection signal="input_event" from="Magia3" to="." method="_on_magia_3_input_event"]
+[connection signal="mouse_entered" from="Magia3" to="." method="_on_magia_3_mouse_entered"]
+[connection signal="mouse_exited" from="Magia3" to="." method="_on_magia_3_mouse_exited"]
+[connection signal="input_event" from="Magia2" to="." method="_on_magia_2_input_event"]
+[connection signal="mouse_entered" from="Magia2" to="." method="_on_magia_2_mouse_entered"]
+[connection signal="mouse_exited" from="Magia2" to="." method="_on_magia_2_mouse_exited"]
+[connection signal="input_event" from="Magia1" to="." method="_on_magia_1_input_event"]
+[connection signal="mouse_entered" from="Magia1" to="." method="_on_magia_1_mouse_entered"]
+[connection signal="mouse_exited" from="Magia1" to="." method="_on_magia_1_mouse_exited"]
+[connection signal="gui_input" from="Close_market" to="." method="_on_close_market_gui_input"]
+[connection signal="pressed" from="Button_confirmar" to="." method="_on_button_confirmar_pressed"]
+[connection signal="input_event" from="Button_confirmar/botao_confirmar" to="." method="_on_botao_confirmar_input_event"]

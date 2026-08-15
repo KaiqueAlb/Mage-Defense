@@ -22,7 +22,6 @@ func _ready() -> void:
 		torres_sorteadas.append(i)
 
 	torres_sorteadas.shuffle()
-	print(torres_sorteadas)
 	for i in range(3):
 		torres[i].get_node("Sprite2D").texture = tower_status[torres_sorteadas[i]].sprite
 
