@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbsecknmhswur"
-path="res://.godot/imported/sprite_teste_torre.png-e2a5c4a51e8c5a46dcc0f4acb9976876.ctex"
+uid="uid://cw8ffd2cs21wq"
+path="res://.godot/imported/Velocidade_de_ataque.png-7fada0f003bd898430cece9dfbded295.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/towers/sprite_teste_torre.png"
-dest_files=["res://.godot/imported/sprite_teste_torre.png-e2a5c4a51e8c5a46dcc0f4acb9976876.ctex"]
+source_file="res://assets/magias/Velocidade_de_ataque.png"
+dest_files=["res://.godot/imported/Velocidade_de_ataque.png-7fada0f003bd898430cece9dfbded295.ctex"]
 
 [params]
 

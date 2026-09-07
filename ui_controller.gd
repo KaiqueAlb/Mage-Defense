@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	pass
 
 func atualizar_vida(vida:int):
-	life_label.text = "= " + String.num_int64(vida)
+	life_label.text = "= " + String.num_int64(vida) + "/15"
 	
 func atualizar_dinheiro(din:int):
 	din_label.text = "= " + String.num_int64(din)

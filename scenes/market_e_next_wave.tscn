@@ -18,10 +18,10 @@ grow_vertical = 2
 [node name="next_wave" type="Button" parent="." unique_id=1119076181]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.47931036
-anchor_top = 0.53360337
-anchor_right = 0.47931027
-anchor_bottom = 0.5336035
+anchor_left = -0.9095431
+anchor_top = -1.8461642
+anchor_right = -0.9095432
+anchor_bottom = -1.8461641
 offset_left = -191.6
 offset_top = -35.751427
 offset_right = 1168.4
@@ -29,7 +29,12 @@ offset_bottom = 335.24857
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.15, 0.15)
+pivot_offset = Vector2(661.0288, 192.34619)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_kt3wp")
 theme_override_font_sizes/font_size = 100
 text = "PRÓXIMA ONDA"
@@ -42,10 +47,10 @@ metadata/_edit_use_anchors_ = true
 [node name="market" type="Button" parent="." unique_id=1328778560]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.84482765
-anchor_top = 0.5
-anchor_right = 0.8448276
-anchor_bottom = 0.5
+anchor_left = -0.5440259
+anchor_top = -1.8797675
+anchor_right = -0.5440259
+anchor_bottom = -1.8797675
 offset_left = -144.0
 offset_top = -33.5
 offset_right = 1216.0
@@ -53,7 +58,12 @@ offset_bottom = 337.5
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.15, 0.15)
+pivot_offset = Vector2(677.77734, 191.11108)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_kt3wp")
 theme_override_font_sizes/font_size = 100
 text = "MERCADO"
@@ -62,3 +72,8 @@ flat = true
 icon_alignment = 1
 script = ExtResource("4_1tmrk")
 metadata/_edit_use_anchors_ = true
+
+[connection signal="mouse_entered" from="next_wave" to="next_wave" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="next_wave" to="next_wave" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="market" to="market" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="market" to="market" method="_on_mouse_exited"]

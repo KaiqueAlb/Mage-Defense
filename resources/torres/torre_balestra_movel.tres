@@ -9,8 +9,10 @@ load_path = "res://.godot/imported/Balestra.png-aa3b1b9191c53108f9092c6152cfd090
 
 [resource]
 script = ExtResource("1_qb1sw")
+nome = "Balestra móvel"
+preco = 15
 dano = 5
 vel = 3.0
-alcance = 30.0
+alcance = 60.0
 sprite = SubResource("CompressedTexture2D_qb1sw")
 projectile = ExtResource("1_wn4b5")

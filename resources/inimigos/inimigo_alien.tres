@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatusInimigo" format=3 uid="uid://de6q4yuur3uhq"]
+
+[ext_resource type="Script" uid="uid://bh03th4qf21vk" path="res://Scripts/resources/status_inimigo.gd" id="1_887ih"]
+[ext_resource type="Texture2D" uid="uid://b28761q4ctipo" path="res://assets/sprite_teste_azul.png" id="2_r11nt"]
+
+[resource]
+script = ExtResource("1_887ih")
+vida = 2
+vel = 128.0
+sprite = ExtResource("2_r11nt")
+dano = 1

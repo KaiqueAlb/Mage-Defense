@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cvgelnvbgh6x8" path="res://scenes/inventory.gd" id="1_53g1v"]
 [ext_resource type="Texture2D" uid="uid://cf8t3464naphy" path="res://assets/UI/Botao.png" id="1_ty45s"]
 [ext_resource type="FontFile" uid="uid://bn6hfjgb4vu7u" path="res://fonts/DeliciousHandrawn-Regular.ttf" id="2_53g1v"]
+[ext_resource type="PackedScene" uid="uid://dpddn0wck1y1y" path="res://scenes/magia.tscn" id="2_yyk2a"]
 
 [node name="Inventory" type="Control" unique_id=532727686]
 layout_mode = 3
@@ -12,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_53g1v")
+magia_botao_scene = ExtResource("2_yyk2a")
 
 [node name="Botao" type="Sprite2D" parent="." unique_id=1851146535]
 position = Vector2(1261, 53)

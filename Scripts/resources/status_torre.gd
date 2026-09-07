@@ -1,6 +1,8 @@
 extends Resource
 class_name StatusTorre 
 
+@export var nome: String
+@export var preco: int
 @export var dano: int
 @export var vel: float
 @export var alcance: float

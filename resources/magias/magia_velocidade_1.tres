@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="StatusMagia" format=3 uid="uid://deaoh2caf1t18"]
 
 [ext_resource type="Script" uid="uid://c58er3kbcgmdj" path="res://Scripts/resources/status_magia.gd" id="1_52en3"]
-[ext_resource type="Texture2D" uid="uid://cbsecknmhswur" path="res://sprites/towers/sprite_teste_torre.png" id="2_y48q0"]
+[ext_resource type="Texture2D" uid="uid://cw8ffd2cs21wq" path="res://assets/magias/Velocidade_de_ataque.png" id="2_y48q0"]
 
 [resource]
 script = ExtResource("1_52en3")
@@ -9,4 +9,5 @@ nome = "Velocidade 1"
 descricao = "Aumenta levementa a velocidade de disparo da torre"
 sprite = ExtResource("2_y48q0")
 tipo = 2
-valor = 0.1
+preco = 10.0
+valor = 1.0

@@ -4,7 +4,7 @@ extends Node2D
 @onready var sprite: Sprite2D = $Sprite2D
 
 var alvo: Area2D
-var dano := 1
+var dano: int
 var velocidade := 500.0
 
 func _process(delta: float) -> void:

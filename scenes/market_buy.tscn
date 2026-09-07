@@ -9,25 +9,36 @@
 [ext_resource type="Resource" uid="uid://dy2olhu8f1hbq" path="res://resources/magias/magia_alcance_1.tres" id="4_01tgu"]
 [ext_resource type="Texture2D" uid="uid://cf8t3464naphy" path="res://assets/UI/Botao.png" id="5_6ptxu"]
 [ext_resource type="Resource" uid="uid://deaoh2caf1t18" path="res://resources/magias/magia_velocidade_1.tres" id="5_mq4as"]
+[ext_resource type="Script" uid="uid://v1vskglcruqb" path="res://Scripts/resources/status_torre.gd" id="6_n5os4"]
+[ext_resource type="Resource" uid="uid://crogqejjrxtex" path="res://resources/magias/magia_cura_1.tres" id="6_v3jsx"]
+[ext_resource type="Resource" uid="uid://ck8lnsinknjyb" path="res://resources/torres/torre_canhao.tres" id="7_o48me"]
+[ext_resource type="Resource" uid="uid://cxiv0eyd0bcn" path="res://resources/torres/torre_catapulta.tres" id="8_v3jsx"]
+[ext_resource type="Resource" uid="uid://cmvwcy0nbit64" path="res://resources/torres/torre_balestra_movel.tres" id="9_wxfub"]
+[ext_resource type="PackedScene" uid="uid://dar48x5x488s2" path="res://torres/torre.tscn" id="10_o48me"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8ejh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_30p85"]
-size = Vector2(1356.6665, 376.66675)
+size = Vector2(1303.3335, 346.66656)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6bxdt"]
+size = Vector2(1290.0002, 330)
 
 [node name="Control" type="Node2D" unique_id=1908597080]
 script = ExtResource("1_xkabj")
-magia_status = Array[ExtResource("2_30p85")]([ExtResource("3_js6oa"), ExtResource("4_01tgu"), ExtResource("5_mq4as")])
+magia_status = Array[ExtResource("2_30p85")]([ExtResource("3_js6oa"), ExtResource("4_01tgu"), ExtResource("5_mq4as"), ExtResource("6_v3jsx")])
+torre_status = Array[ExtResource("6_n5os4")]([ExtResource("7_o48me"), ExtResource("8_v3jsx"), ExtResource("9_wxfub")])
+torre_scene_generica = ExtResource("10_o48me")
 
 [node name="Fundoescuro" type="Sprite2D" parent="." unique_id=540495450]
 modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(576, 323)
+position = Vector2(576, 324)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_n8ejh")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=302605605]
 position = Vector2(576, 323)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_xkabj")
 
 [node name="Magia3" type="Area2D" parent="." unique_id=1218727242]
@@ -69,10 +80,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 818.0
-offset_top = 184.0
-offset_right = 844.0
-offset_bottom = 222.0
+offset_left = 928.0
+offset_top = 115.0
+offset_right = 954.0
+offset_bottom = 153.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("4_1ek8r")
@@ -108,16 +119,21 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 469.0
-offset_top = 409.0
-offset_right = 1829.0
-offset_bottom = 780.0
+offset_left = -97.0
+offset_top = 244.0
+offset_right = 1263.0
+offset_bottom = 615.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.15, 0.15)
+pivot_offset = Vector2(666.3755, 193.5625)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_1ek8r")
 theme_override_font_sizes/font_size = 100
 text = "Confirmar compra"
@@ -129,8 +145,43 @@ metadata/_edit_use_anchors_ = true
 [node name="botao_confirmar" type="Area2D" parent="Button_confirmar" unique_id=2021661668]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button_confirmar/botao_confirmar" unique_id=1435949807]
-position = Vector2(666.6668, 193.33333)
+position = Vector2(673.3335, 186.66675)
 shape = SubResource("RectangleShape2D_30p85")
+
+[node name="Button_rerrolar" type="Button" parent="." unique_id=1160670892]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -386.0
+offset_top = 252.0
+offset_right = 1043.0
+offset_bottom = 623.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+pivot_offset = Vector2(712.8524, 184.4436)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_1ek8r")
+theme_override_font_sizes/font_size = 100
+text = "Atualizar loja (2 $)"
+icon = ExtResource("5_6ptxu")
+flat = true
+icon_alignment = 1
+
+[node name="botao_rerrolar" type="Area2D" parent="Button_rerrolar" unique_id=692469784]
+position = Vector2(40, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button_rerrolar/botao_rerrolar" unique_id=1074288092]
+position = Vector2(673.3333, 166.66675)
+shape = SubResource("RectangleShape2D_6bxdt")
 
 [connection signal="input_event" from="Magia3" to="." method="_on_magia_3_input_event"]
 [connection signal="mouse_entered" from="Magia3" to="." method="_on_magia_3_mouse_entered"]
@@ -142,5 +193,15 @@ shape = SubResource("RectangleShape2D_30p85")
 [connection signal="mouse_entered" from="Magia1" to="." method="_on_magia_1_mouse_entered"]
 [connection signal="mouse_exited" from="Magia1" to="." method="_on_magia_1_mouse_exited"]
 [connection signal="gui_input" from="Close_market" to="." method="_on_close_market_gui_input"]
+[connection signal="focus_entered" from="Button_confirmar" to="." method="_on_button_confirmar_focus_entered"]
+[connection signal="focus_exited" from="Button_confirmar" to="." method="_on_button_confirmar_focus_exited"]
+[connection signal="mouse_entered" from="Button_confirmar" to="." method="_on_button_confirmar_mouse_entered"]
+[connection signal="mouse_exited" from="Button_confirmar" to="." method="_on_button_confirmar_mouse_exited"]
 [connection signal="pressed" from="Button_confirmar" to="." method="_on_button_confirmar_pressed"]
 [connection signal="input_event" from="Button_confirmar/botao_confirmar" to="." method="_on_botao_confirmar_input_event"]
+[connection signal="focus_entered" from="Button_rerrolar" to="." method="_on_button_rerrolar_focus_entered"]
+[connection signal="focus_exited" from="Button_rerrolar" to="." method="_on_button_rerrolar_focus_exited"]
+[connection signal="mouse_entered" from="Button_rerrolar" to="." method="_on_button_rerrolar_mouse_entered"]
+[connection signal="mouse_exited" from="Button_rerrolar" to="." method="_on_button_rerrolar_mouse_exited"]
+[connection signal="pressed" from="Button_rerrolar" to="." method="_on_button_rerrolar_pressed"]
+[connection signal="input_event" from="Button_rerrolar/botao_rerrolar" to="." method="_on_botao_rerrolar_input_event"]

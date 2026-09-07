@@ -1,5 +1,4 @@
 extends Button
-
 @onready var level_manager = get_parent()
 
 func _ready() -> void:
@@ -8,12 +7,12 @@ func _ready() -> void:
 func _button_pressed() -> void:
 	if level_manager.selected_tower_scene:
 		var tower = level_manager.selected_tower_scene.instantiate()
-		tower.status = level_manager.selected_tower_status
+		tower.status = level_manager.selected_tower_status.duplicate()
 		get_node("/root").add_child(tower)
 		hide()
-		tower.position = Vector2.ZERO
-		tower.position.x = position.x + 100
-		tower.position.y = position.y + 100
+		tower.position.x = position.x + 46
+		tower.position.y = position.y + 46
 		level_manager.selected_tower_scene = null
 		level_manager.selected_tower_status = null
+		level_manager.torres_no_nivel = level_manager.torres_no_nivel + 1
 		disabled = true

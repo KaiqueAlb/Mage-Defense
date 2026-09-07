@@ -6,21 +6,41 @@
 [ext_resource type="Texture2D" uid="uid://qldl2ja6edcf" path="res://assets/Background.png" id="4_6cgey"]
 [ext_resource type="Script" uid="uid://b2ybtgx7d2yg7" path="res://Scripts/enemy_controller.gd" id="4_375g6"]
 [ext_resource type="PackedScene" uid="uid://7bjf0rioc8tp" path="res://torres/torre_slot.tscn" id="5_8ytie"]
-[ext_resource type="PackedScene" uid="uid://dabri42ce3nu0" path="res://market_buy.tscn" id="5_waasj"]
+[ext_resource type="PackedScene" uid="uid://dabri42ce3nu0" path="res://scenes/market_buy.tscn" id="5_waasj"]
+[ext_resource type="FontFile" uid="uid://bn6hfjgb4vu7u" path="res://fonts/DeliciousHandrawn-Regular.ttf" id="6_2tu6c"]
 [ext_resource type="PackedScene" uid="uid://bwirxrgwu68vh" path="res://scenes/choose_tower.tscn" id="7_mjdn2"]
 [ext_resource type="Script" uid="uid://v1vskglcruqb" path="res://Scripts/resources/status_torre.gd" id="8_im8u8"]
 [ext_resource type="Resource" uid="uid://cmvwcy0nbit64" path="res://resources/torres/torre_balestra_movel.tres" id="9_w8l1l"]
 [ext_resource type="Resource" uid="uid://ck8lnsinknjyb" path="res://resources/torres/torre_canhao.tres" id="10_molfm"]
 [ext_resource type="Texture2D" uid="uid://lgwvk10y58kx" path="res://assets/caminhos/CaminhoA.png" id="10_vewxl"]
+[ext_resource type="Script" uid="uid://bh03th4qf21vk" path="res://Scripts/resources/status_inimigo.gd" id="10_vg50e"]
+[ext_resource type="Resource" uid="uid://de6q4yuur3uhq" path="res://resources/inimigos/inimigo_alien.tres" id="11_2tu6c"]
 [ext_resource type="Texture2D" uid="uid://ccncah0fqi23c" path="res://assets/caminhos/Caminho_B.png" id="11_m0ka4"]
 [ext_resource type="Script" uid="uid://rr1pcpvnpd4e" path="res://ui_controller.gd" id="11_molfm"]
 [ext_resource type="Texture2D" uid="uid://cf8t3464naphy" path="res://assets/UI/Botao.png" id="12_j8tyd"]
+[ext_resource type="Resource" uid="uid://3haucvjthufq" path="res://resources/inimigos/inimigo_monstro.tres" id="12_jqwh6"]
 [ext_resource type="Texture2D" uid="uid://beo7ftcnecek" path="res://assets/Mago_Torre.png" id="12_o75pw"]
 [ext_resource type="Texture2D" uid="uid://dbfs27swrp4o2" path="res://assets/caminhos/CaminhoC.png" id="12_waasj"]
 [ext_resource type="Texture2D" uid="uid://evokiktu24on" path="res://assets/UI/VidaIcon.webp" id="13_fnj4p"]
+[ext_resource type="Resource" uid="uid://o8o7j07jx2jj" path="res://resources/inimigos/inimigo_soldado.tres" id="13_s6dgj"]
 [ext_resource type="Texture2D" uid="uid://csh57dg8dbgry" path="res://assets/UI/CoinIcon.webp" id="14_8wkgm"]
 [ext_resource type="PackedScene" uid="uid://dqsg25ws4aabj" path="res://scenes/inventory.tscn" id="16_8x6af"]
 [ext_resource type="PackedScene" uid="uid://bnpfxgkbb0or5" path="res://scenes/market_e_next_wave.tscn" id="19_m0ka4"]
+
+[sub_resource type="PackedScene" id="PackedScene_8x6af"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("Object", "Object"),
+"node_count": 1,
+"node_ids": PackedInt32Array(962178586),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 0, 0),
+"variants": [],
+"version": 3
+}
 
 [sub_resource type="Curve2D" id="Curve2D_3iyrq"]
 _data = {
@@ -42,6 +62,7 @@ point_count = 6
 
 [node name="Level_teste" type="Node" unique_id=6352120]
 script = ExtResource("1_8cswh")
+selected_magia_scene = SubResource("PackedScene_8x6af")
 selected_tower_scene = ExtResource("2_6cgey")
 selected_tower_status = ExtResource("3_mjdn2")
 
@@ -64,12 +85,14 @@ offset_bottom = 40.0
 
 [node name="Onda Text" type="Label" parent="Control/Header" unique_id=1691877245]
 layout_mode = 0
-offset_left = 296.0
-offset_top = 50.0
-offset_right = 327.0
-offset_bottom = 75.0
+offset_left = 217.0
+offset_top = 107.0
+offset_right = 248.0
+offset_bottom = 132.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "= 0"
+theme_override_fonts/font = ExtResource("6_2tu6c")
+theme_override_font_sizes/font_size = 25
+text = "Onda: "
 
 [node name="TextureRect" type="TextureRect" parent="Control/Header" unique_id=2041154902]
 layout_mode = 0
@@ -101,23 +124,28 @@ texture = ExtResource("14_8wkgm")
 [node name="Vida Text" type="Label" parent="Control/Header" unique_id=144107806]
 layout_mode = 0
 offset_left = 96.0
-offset_top = 50.0
+offset_top = 37.0
 offset_right = 136.0
-offset_bottom = 73.0
+offset_bottom = 76.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_2tu6c")
+theme_override_font_sizes/font_size = 32
 text = "= 0"
 
 [node name="Din Text" type="Label" parent="Control/Header" unique_id=189988034]
 layout_mode = 0
 offset_left = 222.0
-offset_top = 48.0
+offset_top = 37.0
 offset_right = 262.0
-offset_bottom = 71.0
+offset_bottom = 76.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_2tu6c")
+theme_override_font_sizes/font_size = 32
 text = "= 0"
 
 [node name="enemy_controller" type="Node" parent="." unique_id=539663578]
 script = ExtResource("4_375g6")
+tipos_de_inimigo = Array[ExtResource("10_vg50e")]([ExtResource("11_2tu6c"), ExtResource("12_jqwh6"), ExtResource("13_s6dgj")])
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1374995746]
 position = Vector2(92, 87)
@@ -144,7 +172,7 @@ position = Vector2(525, 337)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("12_waasj")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1140576633]
+[node name="Mago" type="TextureRect" parent="." unique_id=1140576633]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -159,14 +187,14 @@ grow_vertical = 2
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("12_o75pw")
 
+[node name="Inventory" parent="." unique_id=532727686 instance=ExtResource("16_8x6af")]
+
 [node name="Torre_slot_3" parent="." unique_id=953427452 instance=ExtResource("5_8ytie")]
 offset_left = 382.0
 offset_top = -322.0
 offset_right = 584.0
 offset_bottom = -109.0
 size_flags_horizontal = 0
-
-[node name="Inventory" parent="." unique_id=532727686 instance=ExtResource("16_8x6af")]
 
 [node name="Torre_slot" parent="." unique_id=729895132 instance=ExtResource("5_8ytie")]
 offset_left = -269.0
@@ -183,9 +211,10 @@ offset_bottom = 87.0
 size_flags_horizontal = 0
 
 [node name="market_e_next_wave" parent="." unique_id=1558067429 instance=ExtResource("19_m0ka4")]
+visible = false
 z_index = 9
 offset_left = 333.0
-offset_top = 35.0
+offset_top = 22.0
 offset_right = -406.0
 offset_bottom = -561.0
 

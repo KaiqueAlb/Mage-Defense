@@ -7,8 +7,10 @@
 
 [resource]
 script = ExtResource("3_okepo")
+nome = "Canhão"
+preco = 10
 dano = 8
 vel = 5.0
-alcance = 10.0
+alcance = 30.0
 sprite = ExtResource("4_w0avg")
 projectile = ExtResource("2_oxeui")
