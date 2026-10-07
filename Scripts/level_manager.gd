@@ -5,6 +5,8 @@ var magia_selecionada: StatusMagia
 @export var selected_tower_status: StatusTorre
 @onready var ui_controller = $Control
 @onready var enemy_controller = $enemy_controller
+@onready var magia_selecionada_quadrado = $magia_selecionada
+@onready var magia_selecionada_text = $magia_selecionada/magia_selecionada_text
 var torres_no_nivel: int = 0
 var vida_atual: int = 15
 var vida_maxima: int = 15
@@ -20,6 +22,11 @@ func _ready() -> void:
 	ui_controller.atualizar_onda(enemy_controller.wave)
 
 func _process(delta: float) -> void:
+	if magia_selecionada:
+		magia_selecionada_quadrado.visible = true
+		magia_selecionada_text.text = "Magia selecionada: " + magia_selecionada.nome
+	else:
+		magia_selecionada_quadrado.visible = false
 	pass
 
 func tomar_dano(dano: int):

@@ -4,6 +4,8 @@ var projetil_scene = preload("res://scenes/projetil.tscn")
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var detection_area: Area2D = $Area2D
 @onready var click_area: Area2D = $Sprite2D/area_sprite
+@onready var stats: Sprite2D = $Stats
+@onready var stats_text: Label = $"Stats/Stats text"
 var dano: int
 var vel: float
 var alcance: float
@@ -66,7 +68,7 @@ func adicionar_magia(magia: StatusMagia) -> void:
 			detection_area.scale.x = alcance
 			detection_area.scale.y = alcance
 		StatusMagia.Tipo.VELOCIDADE:
-			vel += magia.valor
+			vel = max(0.15, vel / (1.0 + magia.valor))
 
 func aplicar_magias() -> void:
 	for magia in status.magias:
@@ -76,12 +78,17 @@ func aplicar_magias() -> void:
 			StatusMagia.Tipo.ALCANCE:
 				alcance += magia.valor
 			StatusMagia.Tipo.VELOCIDADE:
-				vel += magia.valor
+				vel = max(0.15, vel / (1.0 + magia.valor))
 
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		get_tree().get_first_node_in_group("game_controller").aplicar_magia_na_torre(self)
 
+func _on_mouse_entered() -> void:
+	stats.visible = true
+	stats_text.text = "Dano: " + String.num_int64(dano) + "\nAlcance: " + String.num_int64(alcance) + "\nVelocidade: " + String.num_int64(vel)
+	pass # Replace with function body.
 
-func _on_area_sprite_mouse_entered() -> void:
+func _on_mouse_exited() -> void:
+	stats.visible = false
 	pass # Replace with function body.

@@ -16,7 +16,6 @@ var torres_sorteadas: Array[int]
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	get_tree().paused = true
 
 	for i in range(tower_status.size()):
 		torres_sorteadas.append(i)

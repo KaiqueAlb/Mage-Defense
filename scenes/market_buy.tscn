@@ -11,10 +11,16 @@
 [ext_resource type="Resource" uid="uid://deaoh2caf1t18" path="res://resources/magias/magia_velocidade_1.tres" id="5_mq4as"]
 [ext_resource type="Script" uid="uid://v1vskglcruqb" path="res://Scripts/resources/status_torre.gd" id="6_n5os4"]
 [ext_resource type="Resource" uid="uid://crogqejjrxtex" path="res://resources/magias/magia_cura_1.tres" id="6_v3jsx"]
+[ext_resource type="Resource" uid="uid://dwn7l73udyp5b" path="res://resources/magias/magia_dano_2.tres" id="7_dlka5"]
 [ext_resource type="Resource" uid="uid://ck8lnsinknjyb" path="res://resources/torres/torre_canhao.tres" id="7_o48me"]
+[ext_resource type="Resource" uid="uid://cta5b5bpf3ckn" path="res://resources/magias/magia_velocidade_2.tres" id="8_dvoh8"]
 [ext_resource type="Resource" uid="uid://cxiv0eyd0bcn" path="res://resources/torres/torre_catapulta.tres" id="8_v3jsx"]
+[ext_resource type="Resource" uid="uid://cl70eutofhyvv" path="res://resources/magias/magia_alcance_2.tres" id="9_rniec"]
 [ext_resource type="Resource" uid="uid://cmvwcy0nbit64" path="res://resources/torres/torre_balestra_movel.tres" id="9_wxfub"]
+[ext_resource type="Resource" uid="uid://bp0igreerf2uh" path="res://resources/magias/magia_dano_3.tres" id="10_fbu6y"]
 [ext_resource type="PackedScene" uid="uid://dar48x5x488s2" path="res://torres/torre.tscn" id="10_o48me"]
+[ext_resource type="Resource" uid="uid://clmwdvlrkdyv6" path="res://resources/magias/magia_alcance_3.tres" id="11_npjtu"]
+[ext_resource type="Resource" uid="uid://cg88wcnm8chtn" path="res://resources/magias/magia_velocidade_3.tres" id="12_1pejr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8ejh"]
 
@@ -26,7 +32,7 @@ size = Vector2(1290.0002, 330)
 
 [node name="Control" type="Node2D" unique_id=1908597080]
 script = ExtResource("1_xkabj")
-magia_status = Array[ExtResource("2_30p85")]([ExtResource("3_js6oa"), ExtResource("4_01tgu"), ExtResource("5_mq4as"), ExtResource("6_v3jsx")])
+magia_status = Array[ExtResource("2_30p85")]([ExtResource("3_js6oa"), ExtResource("4_01tgu"), ExtResource("5_mq4as"), ExtResource("6_v3jsx"), ExtResource("7_dlka5"), ExtResource("8_dvoh8"), ExtResource("9_rniec"), ExtResource("10_fbu6y"), ExtResource("11_npjtu"), ExtResource("12_1pejr")])
 torre_status = Array[ExtResource("6_n5os4")]([ExtResource("7_o48me"), ExtResource("8_v3jsx"), ExtResource("9_wxfub")])
 torre_scene_generica = ExtResource("10_o48me")
 
@@ -154,14 +160,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -386.0
-offset_top = 252.0
-offset_right = 1043.0
-offset_bottom = 623.0
+offset_left = -351.0
+offset_top = 244.0
+offset_right = 1009.0
+offset_bottom = 615.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.15, 0.15)
-pivot_offset = Vector2(712.8524, 184.4436)
+pivot_offset = Vector2(666.375, 193.563)
 size_flags_horizontal = 6
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -177,7 +183,6 @@ flat = true
 icon_alignment = 1
 
 [node name="botao_rerrolar" type="Area2D" parent="Button_rerrolar" unique_id=692469784]
-position = Vector2(40, 20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button_rerrolar/botao_rerrolar" unique_id=1074288092]
 position = Vector2(673.3333, 166.66675)

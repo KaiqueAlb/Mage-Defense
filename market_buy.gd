@@ -4,6 +4,7 @@ extends Node2D
 @export var torre_scene_generica: PackedScene
 @onready var controller = $".."
 @onready var info = $RichTextLabel
+@onready var enemy_controller = $"../enemy_controller"
 @onready var market_buy = $"."
 @onready var botao_confirmar = $Button_confirmar
 @onready var botao_rerrolar = $Button_rerrolar
@@ -34,14 +35,30 @@ func sortear_itens(resortear: bool) -> void:
 	if not itens_sorteados.is_empty() and not resortear:
 		return
 	var pool: Array = []
+	
 	for m in magia_status:
-		pool.append({"tipo": "magia", "resource": m})
+		if magia_disponivel(m):
+			pool.append({
+				"tipo": "magia",
+				"resource": m
+			})
+	
 	if controller.torres_no_nivel != 3:
 		for t in torre_status:
-			pool.append({"tipo": "torre", "resource": t})
+			pool.append({
+				"tipo": "torre",
+				"resource": t
+			})
 	
-	pool.shuffle()
-	itens_sorteados = pool.slice(0, 3)
+	itens_sorteados = []
+	
+	for i in range(3):
+		if pool.is_empty():
+			break
+		
+		var item = sortear_item_com_peso(pool)
+		itens_sorteados.append(item)
+		pool.erase(item)
 	
 	item_escolhido = {}
 	info.text = "Escolha uma magia ou torre, passe o mouse em cima para checar suas informações"
@@ -50,6 +67,50 @@ func sortear_itens(resortear: bool) -> void:
 	
 	for i in range(3):
 		magias[i].get_node("Sprite2D").texture = itens_sorteados[i]["resource"].sprite
+
+func sortear_item_com_peso(pool: Array) -> Dictionary:
+	var pesos: Array = []
+	var peso_total = 0.0
+	
+	for item in pool:
+		var peso = 1.0
+		
+		if item["tipo"] == "magia":
+			var magia: StatusMagia = item["resource"]
+			
+			match magia.raridade:
+				StatusMagia.Raridade.COMUM:
+					peso = 70.0
+				StatusMagia.Raridade.INCOMUM:
+					peso = 25.0
+				StatusMagia.Raridade.RARA:
+					peso = 5.0
+		
+		pesos.append(peso)
+		peso_total += peso
+	
+	var sorteio = randf() * peso_total
+	var acumulado = 0.0
+	
+	for i in range(pool.size()):
+		acumulado += pesos[i]
+		
+		if sorteio <= acumulado:
+			return pool[i]
+	
+	return pool.back()
+
+func magia_disponivel(magia: StatusMagia) -> bool:
+	var wave = enemy_controller.wave
+	if wave <= 5:
+		return magia.raridade == StatusMagia.Raridade.COMUM
+	
+	elif wave <= 10:
+		return magia.raridade == StatusMagia.Raridade.COMUM \
+			or magia.raridade == StatusMagia.Raridade.INCOMUM
+	
+	else:
+		return true
 
 func pode_comprar(preco: int) -> bool:
 	return controller.dinheiro_atual >= preco

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="StatusInimigo" format=3 uid="uid://d1x8culatm84"]
+
+[ext_resource type="Script" uid="uid://bh03th4qf21vk" path="res://Scripts/resources/status_inimigo.gd" id="1_wrsne"]
+[ext_resource type="Texture2D" uid="uid://bfd4smfnqf2aq" path="res://assets/sprites/inimigos/Dinossauro_Boss.png" id="2_b06k7"]
+
+[resource]
+script = ExtResource("1_wrsne")
+vida = 15
+vel = 32.0
+sprite = ExtResource("2_b06k7")
+dano = 15
+tipo = 1

@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://bn6hfjgb4vu7u" path="res://fonts/DeliciousHandrawn-Regular.ttf" id="2_vjb58"]
 [ext_resource type="Texture2D" uid="uid://cf8t3464naphy" path="res://assets/UI/Botao.png" id="3_con2f"]
 [ext_resource type="Script" uid="uid://b4v53aerltrlc" path="res://Scripts/button_start.gd" id="4_mhnvy"]
+[ext_resource type="Script" uid="uid://dkyrdcefgtkvf" path="res://scenes/button_creditos.gd" id="5_4ytvr"]
 
 [node name="Menu" type="Control" unique_id=1690212202]
 layout_mode = 3
@@ -40,7 +41,7 @@ text = "Mage Defense
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=1607101253]
+[node name="Button_Start" type="Button" parent="." unique_id=1607101253]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -62,4 +63,28 @@ icon = ExtResource("3_con2f")
 flat = true
 icon_alignment = 1
 script = ExtResource("4_mhnvy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_Creditos" type="Button" parent="." unique_id=200986205]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42686632
+anchor_top = 0.5726466
+anchor_right = 0.42686632
+anchor_bottom = 0.5726466
+offset_left = -18.75
+offset_top = -2.0750122
+offset_right = 1341.25
+offset_bottom = 368.925
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vjb58")
+theme_override_font_sizes/font_size = 100
+text = "CRÉDITOS"
+icon = ExtResource("3_con2f")
+flat = true
+icon_alignment = 1
+script = ExtResource("5_4ytvr")
 metadata/_edit_use_anchors_ = true

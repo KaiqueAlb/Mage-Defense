@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="StatusMagia" format=3 uid="uid://cl70eutofhyvv"]
+
+[ext_resource type="Script" uid="uid://c58er3kbcgmdj" path="res://Scripts/resources/status_magia.gd" id="1_moyut"]
+[ext_resource type="Texture2D" uid="uid://w6m4vh1vr3mu" path="res://assets/sprites/magias/Alcance.png" id="2_pftwo"]
+
+[resource]
+script = ExtResource("1_moyut")
+nome = "Alcance 2"
+descricao = "Aumenta consideravelmente o alcance da torre"
+sprite = ExtResource("2_pftwo")
+tipo = 1
+raridade = 1
+preco = 25.0
+valor = 10.0
+metadata/_custom_type_script = "uid://c58er3kbcgmdj"

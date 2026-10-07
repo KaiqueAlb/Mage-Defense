@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://bcy7ef7u5hdi0"]
+
+[ext_resource type="Texture2D" uid="uid://n42b5xqqjnxj" path="res://assets/fundoescuro.jpg" id="1_7w0ob"]
+[ext_resource type="Script" uid="uid://ckbrfjv73nb00" path="res://select_dificuldade.gd" id="1_ynggk"]
+[ext_resource type="Texture2D" uid="uid://qldl2ja6edcf" path="res://assets/Background.png" id="2_ynggk"]
+[ext_resource type="FontFile" uid="uid://bn6hfjgb4vu7u" path="res://fonts/DeliciousHandrawn-Regular.ttf" id="3_gdfgy"]
+[ext_resource type="Texture2D" uid="uid://cf8t3464naphy" path="res://assets/UI/Botao.png" id="4_rjmja"]
+[ext_resource type="Script" uid="uid://ckckayrb38bo6" path="res://button_facil.gd" id="6_hjfvq"]
+[ext_resource type="Script" uid="uid://dsqh0agrhxg4o" path="res://button_normal.gd" id="7_76yk3"]
+[ext_resource type="Script" uid="uid://da787nktnjqmt" path="res://button_dificil.gd" id="8_6e6s5"]
+
+[node name="select_dificuldade" type="Control" unique_id=693232904]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_ynggk")
+
+[node name="Fundoescuro" type="Sprite2D" parent="." unique_id=283889683]
+modulate = Color(1, 1, 1, 0.50980395)
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_7w0ob")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1098515102]
+position = Vector2(576, 323)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_ynggk")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1583341287]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -204.0
+offset_right = 288.0
+offset_bottom = -79.528015
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_gdfgy")
+theme_override_font_sizes/normal_font_size = 48
+text = "Selecione a dificuldade do jogo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button_facil" type="Button" parent="." unique_id=708983162]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.0
+offset_top = -24.0
+offset_right = 1255.0
+offset_bottom = 347.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_gdfgy")
+theme_override_font_sizes/font_size = 100
+text = "Fácil"
+icon = ExtResource("4_rjmja")
+flat = true
+icon_alignment = 1
+script = ExtResource("6_hjfvq")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_normal" type="Button" parent="." unique_id=267163334]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.0
+offset_top = 51.0
+offset_right = 1255.0
+offset_bottom = 422.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_gdfgy")
+theme_override_font_sizes/font_size = 100
+text = "Normal"
+icon = ExtResource("4_rjmja")
+flat = true
+icon_alignment = 1
+script = ExtResource("7_76yk3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_dificil" type="Button" parent="." unique_id=389281905]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.0
+offset_top = 126.0
+offset_right = 1255.0
+offset_bottom = 497.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_gdfgy")
+theme_override_font_sizes/font_size = 100
+text = "Dificil"
+icon = ExtResource("4_rjmja")
+flat = true
+icon_alignment = 1
+script = ExtResource("8_6e6s5")
+metadata/_edit_use_anchors_ = true

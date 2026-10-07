@@ -12,20 +12,24 @@
 [ext_resource type="Script" uid="uid://v1vskglcruqb" path="res://Scripts/resources/status_torre.gd" id="8_im8u8"]
 [ext_resource type="Resource" uid="uid://cmvwcy0nbit64" path="res://resources/torres/torre_balestra_movel.tres" id="9_w8l1l"]
 [ext_resource type="Resource" uid="uid://ck8lnsinknjyb" path="res://resources/torres/torre_canhao.tres" id="10_molfm"]
-[ext_resource type="Texture2D" uid="uid://lgwvk10y58kx" path="res://assets/caminhos/CaminhoA.png" id="10_vewxl"]
+[ext_resource type="Texture2D" uid="uid://lgwvk10y58kx" path="res://assets/sprites/caminhos/CaminhoA.png" id="10_vewxl"]
 [ext_resource type="Script" uid="uid://bh03th4qf21vk" path="res://Scripts/resources/status_inimigo.gd" id="10_vg50e"]
 [ext_resource type="Resource" uid="uid://de6q4yuur3uhq" path="res://resources/inimigos/inimigo_alien.tres" id="11_2tu6c"]
-[ext_resource type="Texture2D" uid="uid://ccncah0fqi23c" path="res://assets/caminhos/Caminho_B.png" id="11_m0ka4"]
+[ext_resource type="Texture2D" uid="uid://ccncah0fqi23c" path="res://assets/sprites/caminhos/Caminho_B.png" id="11_m0ka4"]
 [ext_resource type="Script" uid="uid://rr1pcpvnpd4e" path="res://ui_controller.gd" id="11_molfm"]
 [ext_resource type="Texture2D" uid="uid://cf8t3464naphy" path="res://assets/UI/Botao.png" id="12_j8tyd"]
 [ext_resource type="Resource" uid="uid://3haucvjthufq" path="res://resources/inimigos/inimigo_monstro.tres" id="12_jqwh6"]
 [ext_resource type="Texture2D" uid="uid://beo7ftcnecek" path="res://assets/Mago_Torre.png" id="12_o75pw"]
-[ext_resource type="Texture2D" uid="uid://dbfs27swrp4o2" path="res://assets/caminhos/CaminhoC.png" id="12_waasj"]
+[ext_resource type="Texture2D" uid="uid://dbfs27swrp4o2" path="res://assets/sprites/caminhos/CaminhoC.png" id="12_waasj"]
 [ext_resource type="Texture2D" uid="uid://evokiktu24on" path="res://assets/UI/VidaIcon.webp" id="13_fnj4p"]
 [ext_resource type="Resource" uid="uid://o8o7j07jx2jj" path="res://resources/inimigos/inimigo_soldado.tres" id="13_s6dgj"]
 [ext_resource type="Texture2D" uid="uid://csh57dg8dbgry" path="res://assets/UI/CoinIcon.webp" id="14_8wkgm"]
+[ext_resource type="Resource" uid="uid://d1x8culatm84" path="res://resources/inimigos/inimigo_monstro_boss.tres" id="15_jqwh6"]
 [ext_resource type="PackedScene" uid="uid://dqsg25ws4aabj" path="res://scenes/inventory.tscn" id="16_8x6af"]
+[ext_resource type="Resource" uid="uid://dbykeselgvugb" path="res://resources/inimigos/inimigo_fantasma_boss.tres" id="16_s6dgj"]
 [ext_resource type="PackedScene" uid="uid://bnpfxgkbb0or5" path="res://scenes/market_e_next_wave.tscn" id="19_m0ka4"]
+[ext_resource type="Texture2D" uid="uid://c13wgqs4ptn2l" path="res://assets/UI/Papel_Menu.png" id="29_chirg"]
+[ext_resource type="PackedScene" uid="uid://bcy7ef7u5hdi0" path="res://select_dificuldade.tscn" id="30_uwm3h"]
 
 [sub_resource type="PackedScene" id="PackedScene_8x6af"]
 _bundled = {
@@ -146,6 +150,7 @@ text = "= 0"
 [node name="enemy_controller" type="Node" parent="." unique_id=539663578]
 script = ExtResource("4_375g6")
 tipos_de_inimigo = Array[ExtResource("10_vg50e")]([ExtResource("11_2tu6c"), ExtResource("12_jqwh6"), ExtResource("13_s6dgj")])
+tipos_de_boss = Array[ExtResource("10_vg50e")]([ExtResource("15_jqwh6"), ExtResource("16_s6dgj")])
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1374995746]
 position = Vector2(92, 87)
@@ -219,6 +224,7 @@ offset_right = -406.0
 offset_bottom = -561.0
 
 [node name="ChooseTower" parent="." unique_id=23892639 instance=ExtResource("7_mjdn2")]
+visible = false
 z_index = 10
 position = Vector2(0, 1)
 tower_scenes = Array[PackedScene]([ExtResource("2_6cgey"), ExtResource("2_6cgey"), ExtResource("2_6cgey")])
@@ -227,3 +233,23 @@ tower_status = Array[ExtResource("8_im8u8")]([ExtResource("9_w8l1l"), ExtResourc
 [node name="market_buy" parent="." unique_id=1908597080 instance=ExtResource("5_waasj")]
 visible = false
 z_index = 10
+
+[node name="magia_selecionada" type="Sprite2D" parent="." unique_id=493586047]
+visible = false
+position = Vector2(793, 55)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("29_chirg")
+
+[node name="magia_selecionada_text" type="Label" parent="magia_selecionada" unique_id=818172947]
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_2tu6c")
+theme_override_font_sizes/font_size = 52
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="select_dificuldade" parent="." unique_id=693232904 instance=ExtResource("30_uwm3h")]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="StatusMagia" format=3 uid="uid://dy2olhu8f1hbq"]
 
 [ext_resource type="Script" uid="uid://c58er3kbcgmdj" path="res://Scripts/resources/status_magia.gd" id="1_vfj0j"]
-[ext_resource type="Texture2D" uid="uid://w6m4vh1vr3mu" path="res://assets/magias/Alcance.png" id="2_of0du"]
+[ext_resource type="Texture2D" uid="uid://w6m4vh1vr3mu" path="res://assets/sprites/magias/Alcance.png" id="2_of0du"]
 
 [resource]
 script = ExtResource("1_vfj0j")

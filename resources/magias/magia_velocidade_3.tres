@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="StatusMagia" format=3 uid="uid://cg88wcnm8chtn"]
+
+[ext_resource type="Script" uid="uid://c58er3kbcgmdj" path="res://Scripts/resources/status_magia.gd" id="1_alqu5"]
+[ext_resource type="Texture2D" uid="uid://cw8ffd2cs21wq" path="res://assets/sprites/magias/Velocidade_de_ataque.png" id="2_2684y"]
+
+[resource]
+script = ExtResource("1_alqu5")
+nome = "Velocidade 3"
+descricao = "Aumenta extremamente a velocidade de disparo da torre"
+sprite = ExtResource("2_2684y")
+tipo = 2
+raridade = 2
+preco = 50.0
+valor = 0.5
+metadata/_custom_type_script = "uid://c58er3kbcgmdj"

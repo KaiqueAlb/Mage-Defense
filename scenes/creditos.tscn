@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://opn2n2dudi1i"]
+
+[ext_resource type="Texture2D" uid="uid://bb4qw40btofoq" path="res://scenes/Menu.png" id="1_jddgq"]
+[ext_resource type="FontFile" uid="uid://bn6hfjgb4vu7u" path="res://fonts/DeliciousHandrawn-Regular.ttf" id="2_lgbdq"]
+[ext_resource type="Texture2D" uid="uid://cf8t3464naphy" path="res://assets/UI/Botao.png" id="3_ul0vb"]
+[ext_resource type="Script" uid="uid://ct8yog185ssny" path="res://scenes/button_voltar.gd" id="4_lgbdq"]
+
+[node name="Creditos" type="Control" unique_id=688490617]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu" type="Sprite2D" parent="." unique_id=1955498213]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_jddgq")
+centered = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=30806915]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.25
+offset_top = -97.0
+offset_right = 136.25
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("2_lgbdq")
+theme_override_font_sizes/normal_font_size = 29
+text = "Desenvolvedor: Flávio Filho
+Artista: José Ivan
+Designer: Iuri Castro"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1551843689]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.25
+offset_top = -196.0
+offset_right = 136.25
+offset_bottom = -126.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("2_lgbdq")
+theme_override_font_sizes/normal_font_size = 54
+text = "Créditos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button_Voltar" type="Button" parent="." unique_id=237448568]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42686632
+anchor_top = 0.5726466
+anchor_right = 0.42686632
+anchor_bottom = 0.5726466
+offset_left = -18.75
+offset_top = 139.92499
+offset_right = 1341.25
+offset_bottom = 510.925
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lgbdq")
+theme_override_font_sizes/font_size = 100
+text = "VOLTAR"
+icon = ExtResource("3_ul0vb")
+flat = true
+icon_alignment = 1
+script = ExtResource("4_lgbdq")

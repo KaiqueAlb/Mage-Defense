@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="StatusMagia" format=3 uid="uid://bp0igreerf2uh"]
+
+[ext_resource type="Script" uid="uid://c58er3kbcgmdj" path="res://Scripts/resources/status_magia.gd" id="1_lu41o"]
+[ext_resource type="Texture2D" uid="uid://o0ldokyhlvdx" path="res://assets/sprites/magias/Dano.png" id="2_n2qag"]
+
+[resource]
+script = ExtResource("1_lu41o")
+nome = "Dano 3"
+descricao = "Aumente extremamente o dano da torre"
+sprite = ExtResource("2_n2qag")
+raridade = 2
+preco = 50.0
+valor = 6.0
+metadata/_custom_type_script = "uid://c58er3kbcgmdj"

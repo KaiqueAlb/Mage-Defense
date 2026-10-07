@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://v1vskglcruqb" path="res://Scripts/resources/status_torre.gd" id="1_qb1sw"]
 [ext_resource type="Script" uid="uid://c58er3kbcgmdj" path="res://Scripts/resources/status_magia.gd" id="1_qrocx"]
-[ext_resource type="Texture2D" uid="uid://co5qt7eciy0uh" path="res://sprites/towers/BalestraProjetil.png" id="1_wn4b5"]
+[ext_resource type="Texture2D" uid="uid://co5qt7eciy0uh" path="res://assets/sprites/towers/BalestraProjetil.png" id="2_n0s1i"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qb1sw"]
 load_path = "res://.godot/imported/Balestra.png-aa3b1b9191c53108f9092c6152cfd090.ctex"
@@ -13,6 +13,6 @@ nome = "Balestra móvel"
 preco = 15
 dano = 5
 vel = 3.0
-alcance = 60.0
+alcance = 20.0
 sprite = SubResource("CompressedTexture2D_qb1sw")
-projectile = ExtResource("1_wn4b5")
+projectile = ExtResource("2_n0s1i")

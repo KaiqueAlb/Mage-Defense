@@ -12,13 +12,18 @@ extends PathFollow2D
 var vida
 
 func _ready() -> void:
-	vida = status.vida + enemy_controller.wave
+	vida = max(1, roundi(
+		(status.vida + enemy_controller.wave)
+		* enemy_controller.fator_dificuldade
+	))
 	sprite.texture = status.sprite
 	hitbox.add_to_group("inimigos")
 
 func _process(delta: float) -> void:
 	_mover(delta)
-	rotation = 180
+	rotation = rad_to_deg(90)
+	scale.x = 0.75
+	scale.y = 0.75
 	_fim_do_caminho()
 	
 
@@ -29,13 +34,10 @@ func receber_dano(valor: int):
 	vida -= valor
 	if vida <= 0:
 		level_manager.ganhar_dinheiro(5)
-		enemy_controller.enemy_alive-=1
-		print(enemy_controller.enemy_alive)
+		enemy_controller.registrar_abate()
 		queue_free()
 
 func _fim_do_caminho():
 	if progress_ratio >= 1.0:
-		level_manager.tomar_dano(status.dano)
-		enemy_controller.enemy_alive-=1
-		print(enemy_controller.enemy_alive)
+		enemy_controller.registrar_vazamento(status.dano)
 		queue_free()

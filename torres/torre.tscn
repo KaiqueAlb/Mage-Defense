@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dar48x5x488s2"]
 
 [ext_resource type="Script" uid="uid://cq0f4tuq262hq" path="res://Scripts/torre.gd" id="1_n36cb"]
+[ext_resource type="Texture2D" uid="uid://csfxn3yx7wyp5" path="res://assets/sprites/towers/CanhaoTorreta.png" id="2_vpkku"]
+[ext_resource type="Texture2D" uid="uid://c13wgqs4ptn2l" path="res://assets/UI/Papel_Menu.png" id="3_vpkku"]
+[ext_resource type="FontFile" uid="uid://bn6hfjgb4vu7u" path="res://fonts/DeliciousHandrawn-Regular.ttf" id="4_th8go"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xxpgf"]
 
@@ -38,6 +41,7 @@ script = ExtResource("1_n36cb")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1736027026]
 position = Vector2(54, 54)
 scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_vpkku")
 
 [node name="area_sprite" type="Area2D" parent="Sprite2D" unique_id=960082698]
 
@@ -55,5 +59,24 @@ position = Vector2(0, -0.5)
 shape = SubResource("CircleShape2D_hcsi4")
 one_way_collision_margin = 19.0
 
+[node name="Stats" type="Sprite2D" parent="." unique_id=1146275849]
+position = Vector2(215, 55.5)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_vpkku")
+
+[node name="Stats text" type="Label" parent="Stats" unique_id=1780493000]
+offset_left = -108.333336
+offset_top = -78.33333
+offset_right = 31.666664
+offset_bottom = 68.66667
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_th8go")
+theme_override_font_sizes/font_size = 39
+text = "Dano:
+Alcance:
+Velocidade:"
+
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Sprite2D/area_sprite" to="." method="_on_area_sprite_mouse_entered"]
