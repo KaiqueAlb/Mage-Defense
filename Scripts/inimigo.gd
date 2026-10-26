@@ -12,10 +12,15 @@ extends PathFollow2D
 var vida
 
 func _ready() -> void:
-	vida = max(1, roundi(
-		(status.vida + enemy_controller.wave)
-		* enemy_controller.fator_dificuldade
-	))
+	var vida_base: int = status.vida + enemy_controller.wave
+	if enemy_controller.boss:
+		vida = enemy_controller.calcular_vida_boss(vida_base, enemy_controller.wave)
+	else:
+		vida_base += enemy_controller.progressao_vida_comum(enemy_controller.wave)
+		if status.tipo == StatusInimigo.Tipo.ALIEN:
+			vida = max(1, roundi(vida_base * enemy_controller.fator_dificuldade) / 2)
+		else:
+			vida = max(1, roundi(vida_base * enemy_controller.fator_dificuldade))
 	sprite.texture = status.sprite
 	hitbox.add_to_group("inimigos")
 

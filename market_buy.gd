@@ -15,6 +15,7 @@ extends Node2D
 ]
 var itens_sorteados: Array = []
 var item_escolhido: Dictionary = {}
+var onda_da_loja: int = -1
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -32,7 +33,8 @@ func abrir_loja_de_magias() -> void:
 	get_tree().paused = true
 
 func sortear_itens(resortear: bool) -> void:
-	if not itens_sorteados.is_empty() and not resortear:
+	var onda_atual: int = enemy_controller.wave
+	if not itens_sorteados.is_empty() and not resortear and onda_da_loja == onda_atual:
 		return
 	var pool: Array = []
 	
@@ -43,7 +45,7 @@ func sortear_itens(resortear: bool) -> void:
 				"resource": m
 			})
 	
-	if controller.torres_no_nivel != 3:
+	if controller.torres_no_nivel < 3:
 		for t in torre_status:
 			pool.append({
 				"tipo": "torre",
@@ -59,6 +61,8 @@ func sortear_itens(resortear: bool) -> void:
 		var item = sortear_item_com_peso(pool)
 		itens_sorteados.append(item)
 		pool.erase(item)
+
+	onda_da_loja = onda_atual
 	
 	item_escolhido = {}
 	info.text = "Escolha uma magia ou torre, passe o mouse em cima para checar suas informações"
@@ -75,7 +79,10 @@ func sortear_item_com_peso(pool: Array) -> Dictionary:
 	for item in pool:
 		var peso = 1.0
 		
-		if item["tipo"] == "magia":
+		if item["tipo"] == "torre":
+			# Torres devem aparecer com frequência semelhante às magias comuns.
+			peso = 70.0
+		elif item["tipo"] == "magia":
 			var magia: StatusMagia = item["resource"]
 			
 			match magia.raridade:

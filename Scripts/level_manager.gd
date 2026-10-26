@@ -7,6 +7,8 @@ var magia_selecionada: StatusMagia
 @onready var enemy_controller = $enemy_controller
 @onready var magia_selecionada_quadrado = $magia_selecionada
 @onready var magia_selecionada_text = $magia_selecionada/magia_selecionada_text
+@onready var game_over = $game_over
+
 var torres_no_nivel: int = 0
 var vida_atual: int = 15
 var vida_maxima: int = 15
@@ -32,6 +34,9 @@ func _process(delta: float) -> void:
 func tomar_dano(dano: int):
 	vida_atual -= dano
 	ui_controller.atualizar_vida(vida_atual)
+	if vida_atual <= 0:
+		game_over.visible = true
+		get_tree().paused = true
 
 func ganhar_dinheiro(din):
 	dinheiro_atual += din

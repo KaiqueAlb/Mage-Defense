@@ -10,6 +10,7 @@ func _ready() -> void:
 func _button_pressed() -> void:
 	enemy_controller.DIFICULDADE_MINIMA = 0.75
 	enemy_controller.DIFICULDADE_MAXIMA = 1.50
+	enemy_controller.multiplicador_vida_boss = 3.0
 	select_dificuldade.visible = false
 	choose_tower.visible = true
 	

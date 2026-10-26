@@ -10,6 +10,7 @@ func _button_pressed() -> void:
 	print("legal")
 	enemy_controller.DIFICULDADE_MINIMA = 1.00
 	enemy_controller.DIFICULDADE_MAXIMA = 2.00
+	enemy_controller.multiplicador_vida_boss = 4.0
 	select_dificuldade.visible = false
 	choose_tower.visible = true
 	

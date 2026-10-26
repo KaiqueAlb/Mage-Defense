@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://6igp5br7wa4h"]
 
-[ext_resource type="Script" path="res://Scripts/level_manager.gd" id="1_8cswh"]
+[ext_resource type="Script" uid="uid://dbtvmyheio217" path="res://Scripts/level_manager.gd" id="1_8cswh"]
 [ext_resource type="PackedScene" uid="uid://dar48x5x488s2" path="res://torres/torre.tscn" id="2_6cgey"]
 [ext_resource type="Resource" uid="uid://cxiv0eyd0bcn" path="res://resources/torres/torre_catapulta.tres" id="3_mjdn2"]
 [ext_resource type="Texture2D" uid="uid://qldl2ja6edcf" path="res://assets/Background.png" id="4_6cgey"]
-[ext_resource type="Script" path="res://Scripts/enemy_controller.gd" id="4_375g6"]
+[ext_resource type="Script" uid="uid://b2ybtgx7d2yg7" path="res://Scripts/enemy_controller.gd" id="4_375g6"]
 [ext_resource type="PackedScene" uid="uid://7bjf0rioc8tp" path="res://torres/torre_slot.tscn" id="5_8ytie"]
 [ext_resource type="PackedScene" uid="uid://dabri42ce3nu0" path="res://scenes/market_buy.tscn" id="5_waasj"]
 [ext_resource type="FontFile" uid="uid://bn6hfjgb4vu7u" path="res://fonts/DeliciousHandrawn-Regular.ttf" id="6_2tu6c"]
@@ -29,6 +29,7 @@
 [ext_resource type="Resource" uid="uid://dbykeselgvugb" path="res://resources/inimigos/inimigo_fantasma_boss.tres" id="16_s6dgj"]
 [ext_resource type="PackedScene" uid="uid://bnpfxgkbb0or5" path="res://scenes/market_e_next_wave.tscn" id="19_m0ka4"]
 [ext_resource type="Texture2D" uid="uid://c13wgqs4ptn2l" path="res://assets/UI/Papel_Menu.png" id="29_chirg"]
+[ext_resource type="PackedScene" uid="uid://dj1s5sfkj3803" path="res://scenes/game_over.tscn" id="29_fes8c"]
 [ext_resource type="PackedScene" uid="uid://bcy7ef7u5hdi0" path="res://select_dificuldade.tscn" id="30_uwm3h"]
 
 [sub_resource type="PackedScene" id="PackedScene_8x6af"]
@@ -233,6 +234,9 @@ tower_status = Array[ExtResource("8_im8u8")]([ExtResource("9_w8l1l"), ExtResourc
 [node name="market_buy" parent="." unique_id=1908597080 instance=ExtResource("5_waasj")]
 visible = false
 z_index = 10
+
+[node name="game_over" parent="." unique_id=654913055 instance=ExtResource("29_fes8c")]
+visible = false
 
 [node name="magia_selecionada" type="Sprite2D" parent="." unique_id=493586047]
 visible = false

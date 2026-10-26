@@ -5,7 +5,7 @@ var DIFICULDADE_MAXIMA;
 
 var enemy = preload("res://scenes/inimigo.tscn")
 
-@export var wave: int = 11
+@export var wave: int = 1
 @export var enemy_count: int = 3
 @export var tipos_de_inimigo: Array[StatusInimigo] = []
 @export var tipos_de_boss: Array[StatusInimigo] = []
@@ -15,6 +15,7 @@ var timer_to_spawn: float = 0.0
 var boss: bool = false
 
 var fator_dificuldade: float = 1.0
+var multiplicador_vida_boss: float = 1.0
 var mortos_na_onda: int = 0
 var vazaram_na_onda: int = 0
 var dano_na_onda: int = 0
@@ -78,6 +79,22 @@ func registrar_abate() -> void:
 	enemy_alive -= 1
 	mortos_na_onda += 1
 
+func progressao_vida_comum(onda_atual: int) -> int:
+	if onda_atual >= 1 and onda_atual <= 4:
+		return onda_atual - 1
+	if onda_atual >= 6 and onda_atual <= 9:
+		return onda_atual - 2
+	if onda_atual >= 11 and onda_atual <= 14:
+		return onda_atual - 3
+	if onda_atual >= 16 and onda_atual <= 19:
+		return onda_atual - 4
+	return 0
+
+func calcular_vida_boss(vida_base: int, onda_atual: int) -> int:
+	# Bosses ganham vida base, crescimento por onda e os fatores de dificuldade.
+	var fator_onda: float = 1.0 + max(0, onda_atual - 5) * 0.08
+	return max(1, roundi(vida_base * multiplicador_vida_boss * fator_dificuldade * fator_onda))
+
 func registrar_vazamento(dano: int) -> void:
 	enemy_alive -= 1
 	vazaram_na_onda += 1
@@ -129,7 +146,7 @@ func next_wave() -> void:
 			enemy_count = 3
 
 		_:
-			enemy_count = 1
+			enemy_count = int((wave / 4) * fator_dificuldade)
 			boss = true
 
 	if !boss:
